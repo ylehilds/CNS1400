@@ -1,0 +1,16 @@
+         Vector Operations
+The following table summarizes the common operations that can be performed on a vector. All of the following assume the vector declaration 
+
+   vector<int> theScores;
+
+Operation Description 
+theScores.at(idx) Returns the value of the element at position idx in the vector theScores. An exception is thrown if idx is out of range. 
+
+theScores[idx] Returns the value of the element at position idx in the vector theScores. No test is done to see if idx is out of range. 
+theScores.front( ) Returns the value of the first element in the vector theScores. No test is done to see if there is a first element.  
+theScores.back( ) Returns the value of the last element in the vector theScores. No test is done to see if there is a last element.  
+theScores.push_back(num) The value num is stored at the end of the vector theScores. If the vector is not large enough to hold the new element, the vector is re-sized.  
+theScores.clear( ) All of the elements of theScores are erased, making the the vector empty.  
+theScores.size( ) Returns the current number of elements in the vector theScores.  
+theScores.capacity( ) Returns the current capacity of the vector theScores, that is the number of elements that can be stored in the vector, without re-sizing.  
+ 

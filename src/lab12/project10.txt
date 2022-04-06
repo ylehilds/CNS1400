@@ -1,0 +1,50 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 10: Processing Arrays of Characters
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59 on Saturday will receive 5 bonus points, only if program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+Reads in lines of text from a file 
+Stores character data in arrays of characters 
+Uses the string manipulation functions to process data stored in character arrays 
+Sorts data stored in character arrays 
+Displays data from a character array 
+Project
+Many programs are written to manipulate data stored in character arrays. A simple word processor is a good example of such a program. In this project you will exercise your knowledge of character arrays to manipulate character data in a number of ways. 
+
+The Program
+Your program will work as follows: 
+
+Prompt the user for a file name. 
+read the file name in and open the file. 
+If the file cannot be opened, print an appropriate message and loop back to step 1. 
+The file will consist of a number of lines of text. Each line is a song title. Your program should read each line and store it as an array of characters. There will be no more than 50 lines of text in the file and each line will be no more than 256 characters long. Your program should correctly handle an end of file and any read errors. 
+Close the file. 
+Once the data has been stored, your program should 
+Remove any leading blanks from a song title. 
+Make sure that the first word in the song title is capitalized. 
+Remove multiple blanks within a line, replacing them with a single blank. 
+Sort the lines of text so that the song titles are in alphabetical order. 
+Display the sorted list of songs. 
+Exit. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+driver.cpp 
+driver.exe 
+Hints
+If you need some help on this project, there are some hints here. 
+
+Grading
+The grade sheet for this project is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here. 
+
+Sample Data File:
+You can get a sample data file here. 

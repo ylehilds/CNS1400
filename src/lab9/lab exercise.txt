@@ -1,0 +1,180 @@
+         Classes and Separate Compilation
+Introduction
+In this programming exercise, you will be introduced to the following ideas: 
+
+Creating your own classes 
+The File structure for programs with programmer defined classes 
+Compiling and linking a program with multiple files 
+Summary of Important Concepts
+C++ provides the facility to divide a program into parts that are kept in separate files. These can be compiled separately and then linked together to form an executable program. This is a very useful operation when dealing with programs that contain user defined classes. It allows you to create a library of classes that can be compiled and re-used in different programs. This is exactly what happens when we use built in classes like istream, ostream, or string. They have been previously compiled. We simply link them into our programs. 
+
+When defining your own class, the class definition, or interface should be placed in a file with a file extension of .h. This is called a header file. When you write a #include statement in your program, you are typically including a header file. Multiple class definitions may be put into the same .h file. This is commonly done with related classes. 
+
+The implementation code for a class goes in a file with the file extension .cpp. It is common to include all of the implementation code for related classes in the same .cpp file. 
+
+The file that contains the main( ) function is often called the driver file. It also is stored in a file with a .cpp file extension. 
+
+Create a Header File
+Start up MinGW and begin a new project. Save it as lab09. Now create a new header file. Save it as tokengiver.h Using the MinGW editor, type in the following code, ignoring line numbers. 
+
+
+1   // Header file for the TokenGiver class 
+2   // Purpose:Models a token vending machine
+3   // Author: Roger K deBry 
+4   // Course: CNS 1250 
+5   // ---------------------------------------------- 
+6    #include <string>
+8   using namespace std; 
+9
+10  #ifndef tokenGiverH 
+11  #define tokenGiverH 
+12
+13  class TokenGiver 
+14  { 
+15  private: 
+16     int numTokens; 
+17  
+18  public: 
+19       // Default Constructor 
+20       // Purpose: Initializes a TokenGiver object 
+21       // Parameters: none 
+22       // Returns: none 
+23       // Pre-conditions: none 
+24       // Post-conditions: none 
+25       TokenGiver( ); 
+26  
+27       // Parameterized Constructor 
+28       // Purpose: Initializes a TokenGiver object 
+29       // Parameter: the initial number of tokens in the machine
+30       // Returns: none 
+31       // Pre-conditions: none 
+32       // Post-conditions: none 
+33       TokenGiver( int ); 
+34
+35      // addTokens function 
+36      // Purpose: add tokens to the machine 
+37      // Returns: void 
+38      // Pre-conditions: none 
+39      // Post-conditions: none 
+40      void addTokens( int ); 
+41
+42      // getToken function 
+43      // Purpose: vends a token (numTokens --)
+44      // Parameters: none 
+45      // Returns: none
+46      // Pre-conditions: none 
+47      // Post-conditions: none 
+48      void getToken( ); 
+49  
+50      // countTokens function 
+51      // Purpose: returns the number of tokens in the machine 
+52      // Parameters: none 
+53      // Returns: the number of tokens as an integer 
+54      // Pre-conditions: none 
+55      // Post-conditions: none 
+56      int countTokens( ); 
+57   }; 
+58   #endif
+
+Look for a minute at lines 10, 11, and 58 of the code. Assume that you have put this code into 
+a file named tokengiver.h. When this class is combined with other files to create a complete program, you will have to place the statement 
+
+   #include "tokengiver.h"
+
+in any file that references the TokenGiver class. Notice that when you #include a programmer written header file, you put the file name in quotation marks, not in the usual < >. In a large program, you may have header files that #includes other files, that themselves #include other files. As a result, a particular header file may get #included multiple times. In C++, you can only define a class once. Lines 10, 11, and 58 are called guard code, and keep the TokenGiver class from being defined more than once. The #ifndef statement is sort of an if statement. It tells the compiler, that if the class TokenGiver has been seen before, then do not include the code between here and line 58, which marks the end of the if. The #define statement tells the compiler, "here comes a class definition. Make a mark on the wall so that you know you have seen it". 
+
+Take careful note of the comments in this file. You will be expected to provided similar comments in your programs. Lines 1- 5 is what is called a file prologue. It describes the contents of the file and gives some information about the file owner. Lines 19 - 24 is an example of a function prologue. You should be familiar with function prologues by now. In a class definition, function prologues are put in the header file so that other programmers using this class definition, know everything they need to about the interface. 
+
+Create an Implementation File
+Now create a new C++ Source code file. Type in the following code, again ignoring line numbers. Save the file as tokengiver.cpp. 
+
+
+1    #include "tokengiver.h"
+2
+3    TokenGiver::TokenGiver( )
+4    {
+5       numTokens = 0;
+6    }
+7
+8    TokenGiver::TokenGiver( int n )
+9    {
+10     numTokens = n;
+11   }
+12 
+13   void TokenGiver::addTokens( int n )
+14   {
+15       numTokens += n;
+16   }
+17 
+18   void TokenGiver::getToken( )
+19   {
+20       numTokens--;
+21   }
+22 
+23   int TokenGiver::countTokens( )
+24   {
+25       return numTokens;
+26   }
+
+Look at line #1. You must #include the header file for the TokenGiver class or this code won't compile. The compiler needs the data declarations and function prototypes that are contained in the class interface. Notice that you put the file name in quotation marks when #including a programmer created header file, not in the usual < > marks. 
+
+Line 3 shows the correct format for writing the function. Notice that we have written the class name, followed by the scope resolution operator, :: , followed by the function name. Because the function name on line 3 is exactly the same as the class name, we know that this is a constructor. On lines 13, 18, and 23, the return type precedes the class name. 
+
+Create a Driver
+Finally, create a third C++ Source file. Type in the following code, save it as driver.cpp. 
+
+
+1    // Main routine
+2    // Purpose: to test the TokenGiver class
+3    // Author: Roger deBry
+4    // Course: CNS 1250
+5    // --------------------------------------
+6 
+7    #include <iostream>
+8    using namespace std;
+9 
+10  #include "tokengiver.h"
+11
+12  int main ( )
+13  {
+14     TokenGiver tokenMachine( 27 );
+15     cout << "\nThe machine has  " << tokenMachine.countTokens( );
+16
+17     tokenMachine.addTokens( 5 );
+18     cout << "\nThe machine has  " << tokenMachine.countTokens( );	
+19
+20     tokenMachine.getToken( );
+21     cout << "\nThe machine has  " << tokenMachine.countTokens( );	
+22
+23     tokenMachine.getToken( );
+24     cout << "\nThe machine has  " << tokenMachine.countTokens( );
+25
+26     cout << endl;
+27	 system ("PAUSE");
+28     return 0;
+29  }
+
+Line #14 creates a TokenGiver object named tokenMachine. Line 15 ouputs the number of tokens in the machine, by invoking the member function countTokens( ). Line 17 adds 5 tokens to the machine, and lines 20 and 21 each take out one token. 
+
+Build your project as you have done in the previous labs. This time the compiler will compile each of the files that you have created and correctly link them together. 
+
+Submitting Your Program
+The process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code (.cpp and .h) files and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Your completed worksheet. 
+Create a zip file containing your source code files (tokengiver.h, tokegiver.cpp and driver.cpp), your executable file, and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab09your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab09rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The gradesheet for this program is here. 
+ 

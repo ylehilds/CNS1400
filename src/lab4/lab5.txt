@@ -1,0 +1,19 @@
+         CNS 1400: Lab Five
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to help you understand how to write programs that use looping constructs. 
+
+After completing this lab, you should be able to come up with solutions to problems that require while loops, do-while loops, and for loops. You should understand the principle of loop invariants, and use that principle to help you design correct loops in your programs. You should also be able to create and use random numbers in a program. 
+
+Study Material
+Loop Invariants 
+Using loop to validate input 
+Random Numbers 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+Worksheet 
+
+Lab Exercise
+Loops, Branches, and Random Numbers  

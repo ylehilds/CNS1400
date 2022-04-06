@@ -1,0 +1,20 @@
+Hints for Project Seven
+The specification for this program should give you most of what you need to solve this problem. If you are having difficulty sorting out how to create the Counter class, you should go back and review the material in Lab Nine. This lab provides a nice introduction to classes. 
+
+You should think about the following questions. The answers are contained in the the specification for this project. 
+
+What are the properties of a Counter? These become the data members for your Counter class. 
+What functions are required to manage these properties? These become the member functions for your Counter class. 
+Create a class diagram. If you don't know how to do this, go back to Lab Nine. It explains how to create a class diagram. 
+
+From the class diagram write down the class definition. The class definition goes into a file with the file extension .h (for header file). 
+
+Implement the functions for your Complex Number class. Write this code in a file with a .cpp file extension. 
+
+An example of a simple program containing a simple class can be found here. 
+
+You can clear the screen with the statement 
+
+    system("cls"); 
+
+Consider using a switch statement in your driver. 

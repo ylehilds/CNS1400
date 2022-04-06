@@ -1,0 +1,68 @@
+         Dynamic Allocation
+Review
+Up to this point in the course, we have dealt with two storage classes for variables declared in our programs: 
+
+Global data 
+Local data 
+In both of these cases, it is the compiler that determines when data exists. Global data is defined in the data segment, and exists for the entire time that the program is executing. The compiler set storage aside for global variables when the program is compiled. The data segment is loaded into computer memory at the same time the executable is loaded. Recall that static data is also in the data segment. 
+
+Local data is defined only within the scope of the block in which it is declared. It comes into existence when it is declared, and it goes away when the block is exited. It has no meaning outside of the block. Local data is stored on the stack. 
+
+Introduction
+In the previous lab, we studied pointers. One important place where pointers are used is in the management of dynamically allocated memory. One advantage to dynamically allocated memory is that you as the program can determine how long the data exists. 
+
+Pointers and Dynamically Allocated Memory
+The new operator allocates storage from the heap during program execution, and returns a pointer to the memory that was allocated. For example, given an Employee class and the following lines of code:
+
+   Employee *empPtr
+   empPtr = new Employee; 
+
+empPtr now contains the address of a dynamically allocated employee object. The object has no name and can only be referenced through empPtr. The object is stored on the heap.
+
+Memory allocated with the new operator should be returned to the heap by calling delete. For example, to return the storage allocated by the previous example, we would write
+
+   delete empPtr
+
+Note that this does not change the value stored in empPtr. It still contains the address of the Employee object. However, the address is no longer valid because it refers to a memory location not owned by the program. The variableempPtr is now referred to as a dangling pointer. You should set dangling pointers to NULL. You can write this as
+
+   empPtr = NULL; 
+
+Programmers use dynamically allocated objects when they don?t know how many objects might be created during the lifetime of a program. This occurs more often than you might imagine. For example, if you were asked to write a program that kept track of employees for a small company, how many employee objects would you declare in your program? The answer is that you don?t know. The company may have 23 employees today, but how many will they have next week, next month, or next year? You don?t want to change your program every time the company hires someone new.
+
+Dynamically Allocating an Array
+Consider the following example where the user inputs how many integers will need to be created when the program is executed. An executable for this program is located here. In this example, the program will ask you how many integer values you want to enter. It will then dynamically allocate enough space to hold that many values, and proceed to get the integer values from you. When it is done, it will display the integer values that you input. It dynamically allocates this storage as an array using a statement like 
+
+    integer *someInts = new int[size]; 
+
+where the value of size has been input by the user. Recalling the unique relationship between a pointer and an array you should see that it is easy to now store data in this dynamically allocated array. 
+
+As is the case for all dynamically allocated storage, you must delete the array when you are done using it. However, the syntax for deleting an array is slightly different than what you might expect at first. To delete the array pointed to by the variable someInts you must write 
+
+    delete [ ] someInts; 
+
+Vectors
+Remember that when you dynamically create an object, all you get back is a pointer to that object. The object has no name and can only be referenced by the pointer. Now you have a problem of storing the pointer someplace. Since we don?t know how many objects will be created, we don?t want to use an array to store the pointers because we can?t guess how big to make the array. What other options do we have? A good choice is a vector.
+
+From the lecture on Vectors keep in mind the following ideas.
+
+Just like an array, a vector must have a type. However, the syntax for creating a vector is very different than that for creating an array. For example, to create a vector of integers we write
+
+   vector<int> myIntVector; 
+
+To store an initial value in a vector, you must use a function of the vector<int> class called push_back For example, to store the integer num in the vector above we would write
+
+   myIntVector.push_back(num); 
+
+Once a value has been stored in a vector however, you can use normal array notation to access the value. Using the above example, we could print the 5th element of the vector by writing (remember that vectors, like arrays, are zero indexed)
+
+    cout << myIntVector[4]; 
+
+Now, what if the vector contains a pointer to an object, like our employee object, and we want to print the employee?s name? We have to assume the data is private, so there must exist a member function of the employee class that will return the name. Let?s call the function getname( ) Then to output the employee?s name pointed to by the 5th element of a vector, we would write
+
+    cout << employeeVector[4]->getName( ); 
+
+The -> operator is used because the variable in the vector is a pointer. 
+
+Managing Memory
+An important thing to remember is that you must always delete the memory that has been allocated from the heap, when you are done using it. In the case of our vector, you must go through the vector one element at a time, and delete the object pointed to by each pointer that is in the vector! 
+ 

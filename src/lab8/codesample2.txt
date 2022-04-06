@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main( )
+{
+   int numOne, numTwo, numThree, numFour, numFive;
+
+   // Open the file
+   ifstream theFile("learn08a.txt");
+
+   if (theFile.good( ) )
+   {
+       theFile >> numOne >> numTwo >> numThree >> numFour >> numFive;
+
+       // print the results
+       cout << "\nThe values were " << numOne
+            << ", " << numTwo
+            << ", " << numThree
+            << ", " << numFour
+            << " and " << numFive;
+   }
+   else
+   {
+	   cout << "\nCould not open the file...";
+	   exit(1);
+   }
+
+   system("PAUSE");
+   return 0;
+}
+
+

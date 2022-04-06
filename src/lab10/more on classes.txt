@@ -1,0 +1,87 @@
+         Constructors, Composition, and Passing Objects as Parameters
+Problem Statement
+Consider a program that requires us to deal with Points and Lines in a 2-dimensional space. Since our program may have many, many Lines and Points, we should consider modelling these as software objects. 
+
+Defining the Data Members
+The first step in coming up with a class definition is to figure out what the properties are for the real world object that we want to model. What are the properties of a point? A point in 2-dimensional space has an x-coordinate and a y-coordinate. We can represent these as integer values. What are the properties of a line? A line has two endpoints. There may be some other interesting properties of a line, such as it's color, but we will not consider these other properties here. 
+
+Cohesion
+The next step is to figure out what operations we need in our class. In object oriented design, there is a concept called cohesion. A class is said to have strong cohesion when all of it's operations and data members work well together, and all support the purpose of the class. Each piece of data should have corresponding member functions to manage that data! Our goal should be to have strong cohesion. In most cases the only operations that are required to manage a piece of data include one to set the value of a variable and one to return the value of a variable. So, in our Point class we would need a setter to set the value of the x-coordinate and a setter to set the value of the y-coordinate. We would also need a getter to return the value of the x-coordinate and a getter to get the value of the y-coordinate. 
+
+In our Line class, we would need getters and setters for the endpoints. 
+
+
+Strong Cohesion
+A class is said to have strong cohesion when all of it's operations and data members work well together, and all support the purpose of the class. 
+ 
+
+Constructors
+Finally, we need to have functions to initialize the data members of an object when the object is created. These are the class's constructors. In general it is a good idea to create a non-parameterized constructor and a parameterized constructor. The non-parameterized constructor, or the default constructor should initialize the data members of the object to some well known values. In our case, setting the x-coodinate and the y-coordinate to zero would be a good choice. 
+
+The class Diagram
+Once we have the ideas in mind for our classes, the next step is to draw a class diagram. We saw how to create a class diagram in the previous lab. In this case, however, we have added an interesting wrinkle. Two of the data members of the Line class are actually objects of the Point class. We show this relationship in the following diagram. This relationship is known as composition. We know that we have a composition relationship because we can say that a Line has two Points.
+
+ 
+
+Passing Objects as Parameters
+Oftentimes, we will find it necessary to pass an object as a parameter to a function. Consider the situation where we want to print the coordinates of a point, or the endpoints of a line. When you define a class, such as our Line or Point class, it is important to keep the class independent of the environment. For that reason it is not considered good design to do input or output in member functions of a class. Rather, use getters and setters in the class to retrieve or store data in the class, but do the I/O elsewhere. In this case, we will write two stand-alone functions to do the output. The printPoint( ) function can be written as follows: 
+
+
+void printPoint(const Point& p)
+{
+   cout << "(" << p.getXCoord( ) << "," 
+        << p.getYCoord( ) << ")";
+}
+
+Notice the following important things about this function: 
+
+It is not a member of the Point class. It is a stand-alone function. 
+The function takes a Point object as its parameter. 
+The Point object is passed by constant reference. 
+The function cannot directly access the data stored in the object. It uses member functions of the class (getters) to get the data. 
+The printLine( ) function can be written as follows: 
+
+
+void printLine(const Line& aline)
+{
+   Point p1 = aline.getStartPoint( );   // get the lines's start point
+   Point p2 = aline.getEndPoint( );     // get the lines's end point
+   printPoint(p1);                      // print the start point
+   cout << " to ";
+   printPoint(p2);                      // print the end point
+}
+
+Note that the printLine( ) function calls the printPoint( ) function. To see how this code works, look at the driver code below: 
+
+
+#include 
+using namespace std;
+
+#include "lines.h"
+// Function prototypes
+void printLine(const Line&);
+void printPoint(const Point&);
+
+int main ( )
+{
+	Point pOne(3,4);           // declare a point object pOne
+	Point pTwo(7,7);           // declare a point object pTwo
+	cout << "\nPoint pOne: ";
+	printPoint(pOne);          // print out the point pOne
+	cout << "\nPoint pTwo: ";
+	printPoint(pTwo);          // print out the point pTwo
+	
+	Line lOne(pOne, pTwo);     // declare a Line object
+	cout << "\nLine lOne: "; 
+	printLine(lOne);           // print the line object
+	cout << endl;
+	
+	system("PAUSE");
+	return 0;
+}
+
+
+Important
+Don't do input or output in member functions of a class. Keep your classes independent of the environment. Use getters and setters and do your I/O elsewhere. 
+ 
+ 

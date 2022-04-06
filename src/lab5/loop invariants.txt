@@ -1,0 +1,68 @@
+         Loop Invariants
+Loop invariants provide us with a way to reason about loops, and can be used to verify that the loops we design are correct. Simply stated, a loop invariant is a relationship among variables in a program that is true when control enters a loop, remains true each time the body of the loop is executed, and is still true when the loop is exited. 
+
+The General Form of a Loop
+It is important to understand a bit about the anatomy of a loop, and to discuss some loop terminology. There are three essential components to any loop. 
+
+Initialization for the loop. 
+The reason for looping, or the termination condition for the loop. 
+The loop body, made up of the statements to be executed each time the program goes though the loop. The loop body must guarantee that the loop terminates in some finite number of steps. 
+Example
+Consider the problem of computing the value of n! where n is a positive, non-zero integer greater than 1. We know from math that 
+
+(1)    n! = 1 * 2 * 3 * ... * (n-1) * n 
+
+The strategy that we want to use to solve this problem is to come up with a loop that creates each new integer value in turn, and then multiples it by the product of the previously computed integers. To do this, define the program variables j and product. The variable j will hold each new integer value as we compute it, and product will hold the product of j and the previously computed integer values. Clearly, when we are finished, 
+
+     j = n and
+     product = j! 
+
+It should be easy to see that the loop body will compute 
+
+     product = product * j; 
+
+and we will want the loop to run as long as 
+
+     j < n. 
+
+The loop can therefore be constructed as follows: Every time that we loop back and start to execute the loop body again, we know that j will be less than n. This is the reason for looping. Inside the body of the loop we need to generate one new integer value with the statement 
+
+     j = j + 1; 
+
+and use that new value to calculate a new product. The loop body therefore has two statements: 
+
+     j = j + 1;
+     product = product * j;
+
+
+Since we know that every loop needs some initialization, we need to provide that here. Our equation (1) for factorial starts with the integer 1. Furthermore, we know that 1! = 1. So, let's write 
+
+     j = 1;
+     product = 1;
+
+
+The finished loop now looks like 
+
+     j = 1;
+     product = 1;
+     // At this point we know that product = j! and j < n
+ 
+     while ( j < n )
+     {
+         j = j + 1;
+         product = product * j;
+         // At this point we also know that product = j! and j < n
+     }
+     // At this point, we know that product = j! and j = n 
+
+We see from the above that there is one condition that is true before we start the loop, it is true each time we complete the body of the loop, and it is true when we exit the loop. This condition, product = j!, is called the loop invariant. 
+
+Using Loop Invariants to Construct Loops
+The steps that we just went through can be used in any similar situation, to construct a loop. In summary, these steps are: 
+
+Come up with a loop strategy that solves the problem. 
+Determine the set of variables required in the loop. 
+Express the result desired when the loop exits, in terms of the loop variables. 
+Write down the reason for leaving the loop and the loop invariant. These can usually be written in terms of the desired result when the loop exits. 
+Construct the initialization and the loop body. 
+ 

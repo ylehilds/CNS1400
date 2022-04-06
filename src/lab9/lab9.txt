@@ -1,0 +1,30 @@
+         CNS 1400: Lab Nine
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to help you better understand the use of objects and classes. 
+
+After completing this lab, you should be able to create your own classes and use them to solve compuational problems. 
+
+You should be able to create a class diagram. 
+You should be able to write a class definition. 
+You should be able to wite a class implementation. 
+You should be able to explain the role of classes and objects in yur programs 
+You should be able to explain terms such as instance variable, member data, and member function. 
+Study Material
+Class Diagrams 
+Classes and Objects 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+
+Worksheet 
+
+Lab Exercise
+Classes and Compiling with Separate Files 
+
+Files
+Code for the completing the Worksheet:
+   integer.cpp
+
+ 

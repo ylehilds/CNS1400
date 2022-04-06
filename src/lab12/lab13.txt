@@ -1,0 +1,28 @@
+         CNS 1400: Lab Thirteen
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to build your understanding of pointers, and to give you practice using pointers in a C++ program. 
+
+After completing this lab, you should be able to 
+
+Explain what a pointer is. 
+Discuss some of the major issues involved with the use of pointers. 
+Write a program that uses pointers and pointer arithmetic. 
+Explain the special relationship between pointers and arrays. 
+Study Material
+Summary of Key Points 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+
+Worksheet 
+
+Lab Exercise
+Reversing a C-style string 
+
+Files
+Code for the completing the Programming Assignment:
+   reverse.cpp
+
+ 

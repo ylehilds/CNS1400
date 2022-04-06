@@ -1,0 +1,17 @@
+         Character Manipulation Functions
+When dealing with arrays of characters, there are a number of useful functions that have been included in the standard library. To use any of these functions, you need to #include <cctype>. A summmary of some of the useful functions built into this library are included in the following table.
+
+Function Description Example 
+toupper(aChar) returns the upper case version of aChar char c = toupper('y'); 
+tolower(aChar) returns the lower case version of aChar char c = tolower('A'); 
+isupper(aChar) returns true if aChar is upper case if (isupper(aChar) )
+   cout << aChar; 
+islower(aChar) returns true if aChar is lower case if (islower(aChar) )
+   cout << aChar; 
+isalpha(aChar) returns true if aChar is an alphabetic character if (isalpha(aChar) )
+   cout << aChar; 
+isdigit(aChar) returns true if aChar is a digit if (isdigit(aChar) )
+   cout << aChar; 
+isspace(aChar) returns true if aChar is whitespace if (isspace(aChar) )
+   cout << aChar; 
+ 

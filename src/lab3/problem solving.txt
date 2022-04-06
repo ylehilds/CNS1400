@@ -1,0 +1,33 @@
+         Problem Solving and Algorithm Development
+We write computer programs to solve problems. Many times the problems we want to solve resemble story problems like those you have seen in your math classes. In order to be a good computer programmer, you have to be a good problem solver. How do you go about solving programming problems? Consider the following problem which we will use to illustrate one problem solving technique. 
+
+The Problem
+We want to write a program that, given the radius of a circle, will calculate the area of that circle. This may seem like a trivial problem, and beginning programmers will be tempted to dive right in and start writing code without doing much thinking about how the problem is to be solved. However, a seasoned programmer will always design the solution before writing any code. 
+
+Write Down What You Know
+One of the first steps to take when trying to solve a problem is to write down everything that you know about the problem. In this case, we know a couple of things. 
+
+We will be given the radius of a circle, so the radius is a known value. 
+From geometry, we know that the area of a circle is equal to p times the radius of the circle squared. 
+Write Down What You Don't Know
+In this case we don't know the area of the circle. However, we do know how to calculate it. 
+
+The Algorithm
+When solving a problem, it is easier if you break the problem into small steps that you understand how to do in your program. The set of steps that we use to solve a problem is called an Alogrithm. Generally, an algorithm takes some input, produces a result, and generates some output. In our example, we get a radius from the user, compute the area, and return the area to the user. We can write this set of steps as follows: 
+
+Ask the user to give us a radius. 
+Get the value for a radius from the user and store it someplace. 
+Since we know how to calculate the area, we can now use this value to compute the area. 
+Finally, tell the user what the area of the circle is. 
+Activity Diagrams
+When you want to know how to get someplace in your car, you often consult a map. We can create something akin to a map that will get us from the things we know in a problem to the things that we don't know. These maps are called Activity Diagrams. An activity diagrams is a map of the steps required to solve a problem. 
+
+Designers of Object Oriented solutions to problems use a language called the Unified Modelling Language (UML) to represent their designs. UML is actually a family of graphical notations for different elements of a design. An activity diagram is one of the graphical notations defined in UML. 
+
+In the simplest case, an activity diagram is composed of a set of rectangles, where each rectangle represents one step, or activity, in the solution of the problem. These rectangles are connected with arrows, to show the flow from one activity to another. The activity diagram that illustrates the steps in our example would look something like the following: 
+
+ 
+
+Writing Code
+Once you have developed a design you are ready to write code. If your design is well thought out, writing the code that solves the problem should be be relatively easy. However, if you have not spent the time necessary to come up with a good design, you may find that you will spend far more time debugging your program and getting it to work correctly than the person who spent the time up front to develop a good design. 
+ 

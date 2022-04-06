@@ -1,0 +1,24 @@
+         CNS 1400: Lab Twelve
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to help you better understand how to use character arrays in your programs. 
+
+After completing this lab, you should be able to 
+
+Explain what is meant by a C-style string. 
+Discuss some of the issues involved with the use of character arrays 
+Write a program that uses a character array. 
+Write a program that uses character manipulation functions 
+Study Material
+Overview of character arrays 
+Character manipulation functions 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+
+Worksheet 
+
+Lab Exercise
+Sentence Correction 
+ 

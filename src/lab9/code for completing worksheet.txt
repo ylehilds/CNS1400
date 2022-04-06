@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+// Class Definition for the MyInt class
+class MyInt
+{
+	private:
+	   int theValue;
+	public:
+	   MyInt( );
+	   MyInt( int );
+
+	   void setValue( int );
+	   int getValue ( );
+	   float reciprocal( );
+
+	   int bogus;     // a public data member
+};
+
+// The class implementation for the MyInt class
+// Constructors
+MyInt::MyInt( )
+{
+	theValue = 0;
+	bogus = 5;
+}
+
+MyInt::MyInt( int n )
+{
+	theValue = n;
+	bogus = 3;
+}
+
+// Getters and setters
+void MyInt::setValue( int n )
+{
+	theValue = n;
+}
+
+int MyInt::getValue( )
+{
+	return theValue;
+}
+
+// Calculation functions
+float MyInt::reciprocal( )
+{
+	return 1.0 / theValue;
+}
+
+// The Driver
+int main ( )
+{
+	// Test the Constructors
+	/* 1 */   MyInt num1;
+	/* 2 */   MyInt num2( 2 );
+
+	/* 3 */   cout << "\nThe first object = " << num1;
+
+	// Test setter
+	/* 4 */   num1.setValue( 5 );
+	/* 5 */   cout << "\nnum1's new value = " << num1.getValue( );
+
+	// Test reciprocal
+	/* 6 */   cout << "\nnum2's reciprocal = " << num2.reciprocal( );
+
+	cout << "\nTest complete ... hit Enter to exit.";
+
+	system("PAUSE");
+                return 0;
+}

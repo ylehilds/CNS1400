@@ -1,0 +1,70 @@
+// Scope
+// CNS 1250 Learning Exercises
+
+
+#include <iostream>
+using namespace std;
+
+const int GLOBAL_VALUE = 12;
+
+void someFunction( );
+
+int main ( )
+{
+
+
+   int mainLocal = 100;
+
+   cout << "\nStarting Main ... Check the values of variables";
+   /* 1 */ cout << "\n1. The GLOBAL_VALUE is = " << GLOBAL_VALUE;
+   /* 2 */ cout << "\n2. The value of mainLocal is " << mainLocal;
+   /* 3 */ cout << "\n3. The value of blockLocal is " << blockLocal;
+   {   // ... here begins a Block ...
+      int blockLocal = 20;
+
+      cout << "\n\nInside the first block ... Check the values of variables";
+      /* 4 */ cout << "\n4. The value of GLOBAL_VALUE is " << GLOBAL_VALUE;
+      /* 5 */ cout << "\n5. The value of mainLocal is " << mainLocal;
+      /* 6 */ cout << "\n6. The value of blockLocal is " << blockLocal;
+
+      int mainLocal = 3;
+      cout << "\n\nInside the first block ... Check the value of mainLocal";
+      /* 7 */ cout << "\n7. The value of mainLocal is " << mainLocal;
+
+      { // another block - inside the first
+         int blockLocal = 30;
+         cout << "\n\nInside the second block with new blockLocal variable";
+         /* 8 */ cout << "\n8. The value of mainLocal is " << mainLocal;
+         /* 9 */ cout << "\n9. The value of blockLocal is " << blockLocal;
+      }
+
+      cout << "\n\nExited the inner block...";
+      /* 10 */ cout << "\n10. The value of blockLocal is " << blockLocal;
+   }
+
+   cout << "\n\nExited the outer block...";
+   /* 11 */ cout << "\n11. The value of mainLocal is " << mainLocal;
+   /* 12 */ cout << "\n12. The value of blockLocal is " << blockLocal;
+
+   someFunction( );
+
+   cout << "\nAfter calling the function ...";
+   /* 13 */ cout << "\n13. The value of functionLocal is " << functionLocal;
+
+   getch( );
+   return 0;
+}
+
+
+void someFunction( )
+{
+   int functionLocal = 300;
+
+   // print everything
+   cout << "\n\nInside the function...";
+   /* 14 */ cout << "\n14. The value of GLOBAL_VALUE is " << GLOBAL_VALUE;
+   /* 15 */ cout << "\n15. The value of mainLocal is " << mainLocal;
+   /* 16 */ cout << "\n16. The value of functionLocal is " << functionLocal;
+}
+
+

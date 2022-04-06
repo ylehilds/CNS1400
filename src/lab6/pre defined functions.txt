@@ -1,0 +1,18 @@
+         Pre-defined Functions
+Some operations are so common in programming, that the developers of the language build pre-defined functions to do those operations. The C++ language comes with several libraries of pre-defined functions. You can consider these functions as "black boxes". You don't need to know how they work. You just need to know what parameters to give to the function, and what kind of value the functions will give you back. The table below lists a number of common mathematical functions that you will often use in your programs. 
+
+Function #include Purpose Parameter
+Types Return
+Type 
+abs(x) <cstdlib> Returns the absolute value of x int int 
+ceil(x) <cmath> Returns the smallest whole number that is greater than x double double 
+cos(x) <cmath> Returns the cosine of the angle x, where x is in radians
+Similar functions exist for other trig functions. double double 
+exp(x) <cmath> Returns ex double double 
+fabs(x) <cmath> Returns the absolute value of x double double 
+floor(x) <cmath> Returns the largest whole number smaller than x double double 
+pow(x,y) <cmath> Returns xy double double 
+rand( ) <cmath> Returns a pseudo random number   double 
+sqrt(x) <cstdlib> Returns the square root of x double double 
+srand(x) <cstdlib> Seeds the random number generator with x double   
+ 

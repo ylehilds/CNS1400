@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int* getPointer(int, int&);
+
+int main( )
+{
+	
+	static int x = 21;
+	// Try to get a pointer to an integer variable
+	int * intPtr1 = getPointer(5, x);
+	
+	// Try to get a pointer to another integer variable
+	int * intPtr2 = getPointer(3, x);// print the integer value
+	
+	// print their values
+	cout << "\nThe value of the integer (*intPtr1) is " << *intPtr1 << endl;
+	cout << "\nThe value of the integer (*intPtr2) is " << *intPtr2 << endl;
+	
+	cout << endl;
+	system("PAUSE");
+	return 0;
+}
+
+int *getPointer(int n, int& ptr )
+{
+	ptr= n;
+	return &ptr;
+}
+

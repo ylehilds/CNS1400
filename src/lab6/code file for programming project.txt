@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+// Write down your function prototype for the isLeap function here
+bool isLeap(int);
+
+int main ( )
+{
+	int year;
+	char decision;
+	
+	do 
+	{
+		cout << "\nEnter in a year (for example, 1923): ";
+		cin >> year;
+		if (isLeap(year) )
+			cout << '\n' << year << " is a leap year.";
+		else
+			cout << '\n' << year << " is not a leap year.";
+		
+		do
+		{
+			cout << "\nDo another year (y or n): ";
+			cin >> decision;
+		} while (decision != 'y' && decision != 'n');
+	} while (decision == 'y');
+	
+	system("PAUSE");
+	return 0;
+}
+
+// write the code for the function isLeap here.
+
+
+
+		
+	

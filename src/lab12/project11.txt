@@ -1,0 +1,63 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 11: Building a string tokenizer
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59 on Saturday will receive 5 bonus points, only if program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+defines a class that can tokenize a string, using character arrays and pointers, 
+gets input from the user, 
+creates a tokenizer object, and 
+prints out the tokens in the input string. 
+Project
+Tokenizing a string breaks the string up into individual pieces, that are separated by some delimiter character in the string. For example, the sentence "I Love New York!" would produce the following tokens, if a blank space were used as the delimiter: 
+  I
+Love
+New
+York! 
+
+In this project you will define a StringTokenizer class and use it to tokenize a string of words input by the user. 
+
+The StringTokenizer Class
+The StringTokenizer class will contain at least the following data members: 
+
+A character pointer, initially pointing to the string to be tokenized. Note that you may not use the string class to solve this problem! 
+The delimiter character 
+and the following member functions: 
+
+A parameterized constructor that takes the string to be tokenized and the delimiter character as parameters The string passed to the constructor must be null terminated. 
+The next( ) function. When called, this function returns a pointer to the next token in the string, or a null pointer if there are no more tokens. As a side effect, any delimiter characters in the original string are replaced with the null terminating character. Note that the next( ) function does not print out the token, it simply returns a pointer to it. You may not use the string class or the strtok( ) function in this assignment. 
+Be sure that your next( ) function takes no parameters and returns a char*.
+
+The Program
+Write a driver program that gets a string of words from the user. Then create a StringTokenizer object, passing the user input string as a parameter, and a blank space as the delimiter character. Your program should print each token in the string on a separate line. Make sure that the DOS window stays open so that the grader can see your output. The following code shows you an example of how your string tokenizer class can be used. 
+
+StringTokenizer parser("I Love New York!", ' ');     // create a StringTokenizer object
+char *token;                // declare a char pointer to hold the address returned by next( )
+token = parser.next();      // get address of the first token
+while (token != NULL)       // keep getting tokens until a NULL is returned
+{
+   cout << token << endl;
+   token = parser.next();
+}
+
+
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+driver.cpp 
+tokenizer.h 
+tokenizer.cpp 
+driver.exe 
+Hints
+If you need some help on this project, there are some hints here. 
+
+Grading
+The grade sheet for this project is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

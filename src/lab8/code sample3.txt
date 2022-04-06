@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main( )
+{
+   int value;;
+
+   // Open the file
+   ifstream theFile("learn08a.txt");
+
+   if (theFile.good( ) )
+   {
+       while (!theFile.eof( ) )
+       {
+		   theFile >> value;
+
+       // print the results
+       cout << "\nThe value is " << value << endl;
+       }
+
+   }
+   else
+   {
+	   cout << "\nCould not open the file...";
+	   exit(1);
+   }
+   system("PAUSE");
+   return 0;
+}
+
+

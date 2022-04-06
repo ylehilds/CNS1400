@@ -1,0 +1,14 @@
+Hints for Project Five
+The logic for this problem is quite straight forward. To write the code for this program correctly, you must overload the getData( ) functions and the calcUnitCost( ) functions. Recall that a function is overloaded when there are two or more functions that have exactly the same name, but have a different number, or different types of parameters. 
+
+Also in this problem the getData( ) functions return a void. You are required to get input data back to your main( ) function. You cannot use global variables. How would you accomplish this? The way to do this is to declare variables to hold this data in your main( ) function and then pass these as parameters to the getData( ) function by reference. 
+
+Before you write any code, think about how you would write the function prologues for each of your functions. What does each function do? What parameters does each function take. Are the parameters passed by reference or by value? If parameters are passed by reference, do you need to avoid side effects? What does each function return? Now write each function prologue and each function prototype. 
+
+To understand what each function does, try writing an activity diagram it. 
+
+When you have completed all of these steps you should be ready to write code! 
+
+By the way, the area of a corcle is given by the formula 
+
+     area = PI * Radius2 

@@ -1,0 +1,65 @@
+         Lab One: Parts of a C++ Program
+All of the programs that you will write in this class will have the following basic structure: 
+
+A File Prologue
+The file prologue contains comments that describe the file. In C++, single line comments begin with // and go to the end of the line. Multiple line comments begin with /* and go until a */ is encountered. I prefer the use of single line comments in the file prologue. A sample file prologue would look something like the following. Note that in this course, the file prologue must include the "no-copy" declaration. 
+
+// Course: CNS 1250 Section 003
+// Instructor: Professor deBry
+// File: myProgram.cpp
+// Contents: Programming Assignment #3
+// I declare that the following source code was written
+// solely by me. I understand that copying any source
+// code, in whole or in part, constitutes cheating, and
+// that I will receive a zero in this assignment if I am
+// found in violation of this policy.
+// -----------------------------------
+
+
+Directives
+Directives are not C++ language statements, but instructions to a preprocessor to do something to your source code before the program is compiled. The most common directive is the #include. #include directives tell the preprocessor to add the source code contained in the specified file to the program before it is compiled. The files that are included are what are called header files. For example, almost every program you will write this semester will contain the directive
+ 
+   #include <iostream>
+
+
+This directive inserts the source code from the header file for the iostream class into the source code for your program at the point where the #include directive is written. The header file is necessary because it contains declarations needed by the compiler when it compiles statements in your program that use cin, cout, the stream insertion operator <<, and the stream extraction operator >>. 
+
+You can actually look at this source code (although it may not mean very much right now) by looking in the directory where the your compiler is stored. 
+
+
+Using statements
+A C++ program can be divided into different namespaces. A namespace is a part of the program where certain names are recognized. Every bit of code that you write is in some namespace. If you don't put your code in a specific namespace, it goes in the global namespace by default. The code written in the standard C++ library is in the std namespace. So that the compiler knows when you are using a name from the std namespace, you prefix the name with the namespace. For example to use the name cout from the standard library you would write
+ 
+    std::cout << "Hello.";
+
+This can be somewhat tiresome when writing a long program where cout is used often, so you can simply write the statement
+ 
+    using namespace std;
+
+at the beginning of your program.
+
+
+Global constants
+If you have constants that you will use thoughout your program, they should be declared before the main function begins. Variables declared inside of a function are known as local variables, and they cannot be seen outside of the function in which they are declared. It is common to have constants that will be used globally, throughout the program. Such global constants must be declared in front of the main function. The names of constants are written in all upper case, using underlines, if necessary to separate words. For example
+ 
+   const int BOX_SIZE = 12;
+
+
+The main( ) Function
+Every C++ Program must have exactly one function named main( ). When your program is loaded into memory, the computer looks for the function named main( ) and begins execution there. The main( ) function contains the declarations and C++ statements you want executed when your program runs. Notice that the body of the function main( ) is enclosed between a set of curly braces "{" and "}". 
+
+Comments
+Comments are portions of your program that the compiler ignores. They are used to document your code. There are two types of comments in a C++ program. Comments that begin with a double slash // run to the end of the line on which they appear. The compiler ignores everything between the // and the end of the line. 
+
+Multi-line comments begin with /* and run until the compiler sees */. Such comments can cross many lines. The compiler ignores everything between the /* and the */. 
+
+Statements
+The body of a function is made up of statements. A statement is a line of source code that contains some instructions in the C++ language. Statements end with a semi-colon. 
+
+The return statement
+The main function should end with a statement of the form 
+ 
+    return 0; 
+
+This statement tells the computer that the main function is done, and control of the computer should return to the operating system. The 0 at the end of the return statement tells the operating system that the main( ) function ended without error. 
+ 

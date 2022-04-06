@@ -1,0 +1,69 @@
+         Programming Exercise: Problem Solving
+Introduction
+In this lab, you will do the following: 
+
+Analyze a programming problem. 
+Devise the algorithm required to solve the problem. 
+Create an activity diagram for the problem. 
+write the program that solves the problem 
+Before doing this exercise, you should review the reading material assigned for this lab and do the learning exercises on the worksheet. 
+
+The problem
+Given a temperature input to your program in degrees Celsius, calculate the temperature in degrees Fahrenheit. 
+
+Deriving the Solution
+Following the model outlined in Problem Solving and Algorithm Development, write down what you know, and what you don't know. You can convert a temperature given in degrees Celsius to a temperature in degrees Fahrenheit by multiplying the Celsius temperature by 9/5 and adding 32 to the result. 
+
+Write down the steps required to get from what you know to what you don't know. 
+
+Now draw an Activity Diagram. You will turn in your diagram as part of this lab, so make sure that it is neat and readable. You will have to submit your activity diagram as part of the zip file that you submit for this lab. If you hand write your diagram you will scan it in and send me the .jpg, .tiff, or .gif file. A better way to do your diagram is to use Microsoft word to create it. You may add it to the bottom of your worksheet. 
+
+Writing the Code
+Given the outline below, develop the code the implements your algorithm. 
+
+#include <iostream>
+using namespace std; 
+ 
+// No Magic Numbers!
+const int DELTA = 32;
+const int NINE = 9;
+const int FIVE = 5;
+
+
+int main( )
+{
+    // local variables
+    double tempCelsius;
+    double tempFahrenheit;
+
+    // Here you must supply code that implements
+    // your algorithm to convert a temperature
+    // given in degrees Celsius to a temperature
+    // in degrees Fahrenheit.
+    // Values for temperatures in degrees Celsius
+    // will be given to the program by the user.
+    system("PAUSE");
+    return 0;
+} 
+
+Submitting Your Program
+Build your project and resolve any compiler errors. Run the program several times, giving it some temperatures to convert. Check your answers. If the program does not produce the correct answers, look at your algorithm and make certain that you are doing the calculation correctly. Pay close attention to data type conversions that may occur. 
+
+Once you have a working solution, the process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code (.cpp) file, an executable file (.exe), and your completed worksheet. Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Create a zip file containing your source code file (lab03.cpp), your executable file (lab03.exe), and your completed worksheet. Create an electronic version of your activity diagram (a scanned image file, or a Microsoft Office File) and include it in your zip file. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab03your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab03rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The gradesheet for this lab is here. 
+ 

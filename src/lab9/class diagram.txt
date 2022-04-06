@@ -1,0 +1,38 @@
+         Class Diagrams
+Introduction
+ 
+In previous labs, you have been introduced to Activity Diagrams. In this lab you will learn about Class Diagrams. Activity diagrams and class diagrams are both part of a graphical language used to convey design information, called UML. Class diagrams are used to specify the properties and operations of a class, and to show the static relationships between classes. 
+
+Example
+Consider a class, TokenGiver, that models a machine that gives out tokens. This could be seen as a simple example of a machine that you might find at a carwash or a videogame business that you would use to buy tokens. In this simple example, the only piece of data that this class will contain is an integer whose value represents the number of tokens in the machine. The operations that the class provides will let the machine give us a token givetoken( ), add tokens to the machine addTokens( ), and count the number of tokens in the machine countTokens( ). 
+
+A class diagram is drawn as a rectangle, and has three basic parts: 
+
+The top section of the diagram contains the class name. It is usually written in bold text. 
+The center section of the diagram contains the properties or data members of the class. 
+The bottom section of the diagram contains the operations or member functions of the class. 
+The figure below shows the class diagram for the TokenGiver class.
+
+ 
+
+ 
+
+
+Notice that the declaration of a property has three parts: 
+
+The property's visibility, 
+the propert's name, and 
+the property's data type. 
+The declaration of an operation is similar. It has: 
+
+The operation's visibility, 
+the operations name, 
+the parameters of the operation, 
+the operation's return type. 
+
+
+Note that the rules for drawing a class diagram are quite strict. Software developers use class diagrams to convey important design information. If the diagram is not correct, then the wrong information may be conveyed. 
+
+Reference
+Martin Fowler, UML Distilled, Third Edition, Addison-Wesley 2004, pages 35-52. 
+ 

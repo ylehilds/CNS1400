@@ -1,0 +1,73 @@
+CNS 1400Midterm #1 Study Guide
+The objective of this examination is to provide both you and me with some measure of the learning that you have accomplished up to this point in the semester. Learning to program is much more than just being able to regurgitate facts about a particular programming language, and the mechanics of getting a program to compile and execute. This exam will test your understanding of basic programming principles and your ability to apply those principles correctly to solve difficult computing problems. 
+
+This exam is OPEN BOOK. You may bring your textbook to class to use as a reference for C++ syntax. However, you may not use class notes, copies of slides presented in class, or crib notes of any kind. Foreign students may bring a foreign language-English dictionary to the testing center. 
+
+You will be responsible for the material discussed in class as well as the textbook reading assignments and all of the labs and programming assignments. 
+ 
+Topic Study Material 
+Introduction to C++
+
+Demonstrate that you know how data of different types is stored in the computer. 
+Be able to discuss key differences between procedural and OO programming. 
+Be able to describe the basic elements of a C++ program. 
+Be able to explain the steps in creating, compiling, loading a C++ program into memory, and executing it. 
+Demonstrate that you understand good C++ style and syntax. 
+Be able to describe the use of the data segment, the stack and the heap to store program data. 
+ Introduction to C++ (Slides)
+
+Big C++ chapter 1
+
+Lab #1
+ 
+Objects and Primitive Data
+
+Be able to create and use proper C++ identifiers. 
+Be able to describe the differences between objects and primitive data. 
+Be able to discuss the different primitive data types in the C++ language and know how each is used. 
+Know the difference between a constant and a variable. 
+Show that you can write declarations for constants and variables properly in C++. 
+Demonstrate that you know what cin and cout are and that you can use them correctly in a C++ program. 
+Show that you can format data for ouput. 
+ Objects and Primitive Date (slides) 
+Big C++ chapter 2 
+Lab #2
+ 
+Expressions
+
+Demonstrate that you know how to correctly use all of the C++ operators. 
+Show that you know how operator precedence affects expression evaluation. 
+Show that you understand how and when data type conversions occur in expression evaluation. 
+Show that you can properly use the static_cast operator. 
+Demonstrate that you can use the string class correctly in a C++ program. 
+ Expressions (Slides) 
+Big C++ chapter 2 
+Lab # 3
+ 
+Flow of Control
+
+Be able to trace the normal flow of control through a C++ program, and then show how that flow is altered by 
+if statements 
+if/else statements 
+switch statements 
+for statements 
+do statements 
+do/while statements 
+Be able to evaluate and use boolean expressions correctly. 
+Be able to use logical operators in complex boolean expressions. 
+Show that you know what an enumeration is and how to use one. 
+Show that you can correctly use while and break. 
+Given a computational problem, show that you can 
+Create an algorithm to solve the problem. 
+Create a UML activity diagram to express the steps in the alogorithm. 
+Use stepwise refinement to solve more complex problems. 
+Translate an algorithm into code. 
+Debug a program using your algorithm. 
+ Flow of Control I (slides) 
+Flow of Control II (Slides) 
+Big C++ chapters 4 and 7 
+Lab #4 
+Lab #5 
+Project #1 
+Project #2 
+ 

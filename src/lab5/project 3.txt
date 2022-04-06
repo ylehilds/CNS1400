@@ -1,0 +1,49 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 3: Rabbits, Rabbits, Rabbits
+
+--------------------------------------------------------------------------------
+
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. Programs received prior to 11:59pm on Saturday will receive 5 bonus points only if the program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+makes use of a UML Activity Diagram to describe the steps required to solve the problem 
+uses a loop statement 
+uses decision logic 
+uses arithmetic expressions, assignment, and 
+formats output and sends it to cout 
+Project:
+This is another problem solving project. Once you have figured out the steps required to solve the problem, writing the code should be pretty easy. As you did in the last project, 
+
+Write down everything that you know about the problem 
+Write down what it is that your program needs to compute 
+Write down any formulas or equations that you might find useful in step (2) 
+create a UML Activity Diagram, as demonstrated in lab #3. Then use the activity diagram as the basis for writing the code that you submit. 
+Suppose that a scientist is doing some important work that requires her to use rabbits in her experiments. She starts out with one pair of baby rabbits (a male and a female). At the end of each month, a pair of rabbits produces one pair of offspring (a male and a female). The scientist has 500 cages in which to hold her rabbits. Each cage holds one pair of rabbits. Assuming that no rabbits ever die, when will she run out of cages? 
+
+Your program must do the following: 
+
+Print out your student information. 
+Print a table that contains the following information for a period of fifteen months. 
+The number of months that have passed. 
+The number adult rabbits (those over 1 month old). 
+The number of baby rabbits produced this month. 
+The total number of rabbit pairs in the lab. 
+Print out how many months it will take until the number of rabbits exceeds the number of available cages. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Also include an electronic version of you Activity Diagram. Diagrams may be done in Word, or scanned in and sent as an image file. Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+rabbits.cpp 
+rabbits.exe 
+UML diagram 
+Hints
+If you need help solving this problem, you can find some hints here. 
+
+Grading
+The grade sheet for this program is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

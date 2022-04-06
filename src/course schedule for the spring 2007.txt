@@ -1,0 +1,76 @@
+   
+  CNS 1400 Course Schedule - Spring 2007
+
+Note that this schedule is subject to change during the semester! 
+
+To see a detailed description of the objectives, reading assignments,
+labs, and projects due each week, click on the Topic link.
+
+
+Week of Topic Week of Topic 
+Jan 1
+ Course Introduction
+  * classes begin 1/4
+ Feb 26 Streams and File I/O
+  * lab #8 due 2/28
+  * project #6 due 3/4 
+Jan 8 Introduction to C++
+  * lab #1 due 1/14 Mar 5 Structures and Classes
+  * lab #9 due 3/7
+  * project #7 due 3/11 
+Jan 15 Objects and Primitive Data
+  * Human Rights Day 1/15
+  * Tuition Payment Deadline 1/17
+  * lab #2 due 1/21
+ Mar 12 More Classes
+  * Spring Break 3/14-16
+ 
+Jan 22 Expressions
+  * Last day to drop classes
+  * lab #3 due 1/24
+  * project #1 due 1/28 Mar 19 Constructors
+  * lab #10 due 3/21
+  * project #8 due 3/25
+  * Exam #2 3/23 - 3/29  
+Jan 29 Flow of Control I
+  * lab #4 due 1/31
+  * project #2 due 2/4 Mar 26 Arrays and Vectors
+  * lab #11 due 3/28
+  * project #9 due 4/1
+ 
+Feb 5 Flow of Control II
+  * lab #5 due 2/7
+  * project #3 2/11
+  * Exam #1  2/9 - 2/15
+ Apr 2 Character Arrays
+  * lab #12 due 4/4
+  * project #10 4/8
+ 
+Feb 12 Functions
+  * lab #6 due 2/14
+  * project #4 due 2/18
+ Apr 9 Pointers
+  * lab #13 due 4/11
+  * project #11 due 4/15
+ 
+Feb 19 Parameters and Overloading
+  * President's Day 2/19
+  * lab #7 due 2/21
+  * project #5 due 2/25
+ Apr 16 Dynamic Arrays
+  * lab #14 due 4/18
+  * Study Day 4/20
+ 
+
+Final Exam Schedule: Internet students will take their final exam in the testing center on April 23 - 25. Other students will take the final exam in their normal classroom according to the published final exam schedule. You can see the final exam schedule for spring semester 2007, at http://www.uvsc.edu/schedule/pdfs/FinalExamsSpr07.pdf 
+
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 

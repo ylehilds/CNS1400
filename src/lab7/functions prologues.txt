@@ -1,0 +1,48 @@
+         Function Prologues and the Assert Macro
+Developing correct software is a difficult task. Much of the science of software enginering has to do with creating software that works correctly. A concept that works particularly well when developing functions is the idea of Programming by Contract. 
+
+Programming by Contract
+Programming by Contract was first introduced by Bertrand Meyer, the creator of the Eiffel language. The basic idea behind programming by contract is that there exists a contract between the developer of a function (the supplier) and the user of a function (the consumer). These contracts are specified with preconditions and postconditions. Preconditions state any conditions that must be met by the consumer when invoking the function, while postconditions state the conditions that the supplier guarantees to be true after the functions completes. Of course, the guarantee only applies when the preconditions are met by the consumer. 
+
+Assertions
+When writing a function you should do the following: 
+
+Think carefully about the inputs to your function. What conditions must be met by these inputs in order for your function to work correctly? Write these down as preconditions to your function. 
+Before you do anything else in the function, test the inputs to make certain that all of the preconditions are met. 
+Now, be sure that your function does exactly what you promised in your postconditions. 
+How do you test preconditions? One technique is to use an assertion. An assertion tests some condition in your program and if the condition is not met, the assertion will cause the program to terminate. While program termination is not always an attractive way of handling a program error, it is useful during the development stages of a program. One of the nice things about assertions is that they can be turned off when you are satisfied that your program is working correctly. 
+
+The Function Prologue
+Where do you write the preconditions and postconditions for a function. A handy place is in what is called the function prologue. A function prologue is simply a series of commented lines that describe a function. In addition to the preconditions and postconditions, a function prologue can contain a short statement about what the function does, what its inputs are, and what it returns. I usually write function my prologues when I write my function prototypes. 
+
+An Example
+Consider the following simple example. We want to write a function that divides one integer value by another, and returns the quotient. A reasonable precondition is that the denominator cannot be equal to zero. The function prologue might look something like: 
+
+   // divide( ) function
+   // Purpose: This function divides one number by a second,
+   // and returns the quotient of the two
+   // Inputs: The function takes two integer arguments.
+   // The first argument is divided by the second
+   // Returns: The function returns the quotient as a double.
+   // Preconditions: The second argument cannot be equal to zero
+   // Postconditions: The return value preserves the
+   // fractional part of the answer
+   // ----------------------------------------------------------- 
+
+The code for the function might then look as follows: 
+
+   #include <cassert> // necessary when using assertions
+   . . .
+   double divide(int n1, int n2)
+   {
+      assert (n2 > 0); // test the preconditions
+      double quotient = static_cast<double>(num1) / num2;
+ 
+      // test the postconditions
+      assert ( (quotient * num2) == num1);
+      return quotient;
+   }
+
+
+Turn off assertions by placing a #define NDEBUG statement in front of the #include <cassert> statement. 
+ 

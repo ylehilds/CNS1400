@@ -1,0 +1,61 @@
+         Pointers
+Introduction
+"Pointers have been lumped with the goto statement as a marvelous way to create impossible to understand programs. This is certainly true when they are used carelessly, and it is easy to create pointers that point somewhere unexpected. With discipline, however, pointers can be used to achieve clarity and simplicity." 
+     Brian Kernighan and Dennis Ritchie 
+
+Pointers are extremely powerful programming tools, but they are easy to misuse. Some programming languages, such as Java, don't provide pointers because of the frequent errors that can occur when using them. The concept behind pointers is quite simple. On the other hand, learning to use pointers correctly takes time and discipline. You would be well served to study this section carefully and spend some time writing some practice programs that use pointers. 
+
+Important Pointer Concepts
+So far we have talked about variables that hold integers, floating point values, characters, and so on. From the computer's point of view, a variable is just a location in the computer's memory where a piece of data is stored. Each such location in memory has as address. Just as we can store an integer or a character in the computer's memory, so can we also store an address. A variable that contains an address is called a pointer. It is important to noter that pointers are typed. That is, the pointer knows what kind of data it points to. For example, to declare a pointer to an integer variable we would write 
+
+   int *myAgePtr; 
+
+This declaration says that the variable myAgePtr is a pointer to an integer variable. That is, it may contain the address of an integer variable. Beware, at this stage the variable myAgePtr contains garbage. If used as a pointer, it will most certainly get your program into trouble. The C++ standard library defines a special constant, NULL that should be used to represent a pointer that does not point to anything. When you declare a pointer, it is advisable to initialize the pointer to NULL as shown below: 
+
+   int *myAgePtr = NULL; 
+
+How do you store a real address in a pointer? To get an address we use the address of operator (&). The following statement takes the address of the variable age and stores it in myAgePtr: 
+
+   myAgePtr = &age; 
+
+To access the variable pointed to by a pointer, we use the dereference operator (*). For example, to store the value 5 in the variable pointed to by the pointer myAgePtr we would write 
+
+   *myAgePtr = 5; 
+
+This statement says, "Go to the variable whose address is stored in myAgePtr and store the value of 5 there". If, as in the previous example, myAgePtr contains the address of the variable age, then age now contains the value of 5. 
+
+About now you are probably asking yourself, "Why go to all of this trouble? Why not just write 
+age = 5;? Well, in this case your probably would. However, as we will soon learn, there are other occasions when using a pointer makes more sense. 
+
+Pointers and Arrays
+ 
+There is a unique relationship between pointers and arrays. Consider the declaration 
+
+   int scores[10]; 
+
+This declares scores to be an array of 10 integers. The value of scores is actually the address of the first element in the array. Thus we could write 
+
+   int *aPtr = scores; 
+
+
+Now the pointer aPtr also points to the first element of the array. We can dereference the pointer and store a value in the array by writing 
+
+   *aPtr = 5; 
+
+This has exactly the same effect as if we had written 
+
+   scores[0] = 5; 
+
+Pointer Arithmetic
+Since a pointer is just a variable, it is reasonable to be able do arithmetic on it. In fact, we often add and subtract values from pointers. However, the results are not quite what you might expect. Consider the example above, where we declared 
+
+   int *aPtr = scores; 
+
+If we add one to the pointer, the address is incremented by the size of the data type it was declared as pointing to. In this case, aPtr has been declared as a pointer to an integer. So, when one is added to the pointer, as in the statement 
+
+   aPtr = aPtr + 1; 
+
+it points to the next integer in the array. 
+
+ 
+ 

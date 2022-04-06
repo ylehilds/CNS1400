@@ -1,0 +1,53 @@
+         Programming Exercise: Reading Data From a File
+Introduction
+In this exercise, you will create a program that reads data from a file. 
+
+The problem
+In this exercise exam scores for a class of students is stored in a file. You are to write a program that successfully opens the file, reads in the exams scores, finds the average score, the highest score, and the lowest score, and prints these out. The average score should be printed with 2 digits after the decimal point. 
+
+Deriving the Solution
+The average score is simply the sum of all of the scores in the file, divided by the number of scores in the file. To find the average we just need to add each score as it is read in. Keep track of the number of scores to use as the divisor when finding the average. 
+
+To find the largest score, do the following: 
+
+Define a variable, max to hold the highest score. 
+Read in the first score. 
+Test the state of the stream to make certain that you have read valid data. 
+Store the value you just read into max. 
+Read in the next score. 
+Test the state of the stream to make certain that you have read valid data. 
+See if the score that you just read in is greater than max. If it is, set max equal to this value. 
+If you have not reached the end of the file, go back to step 5. 
+At the conclusion of this loop, you should have the highest score stored in max. 
+
+You can find the minimum value in a similar fashion. 
+
+Create an activity diagram that describes all of the steps you need for this program. You will submit this activity diagram with your code. 
+
+Writing the Code
+Write the program, following the steps outlined in your activity diagram. Be sure that your program does the following: 
+
+Tests to make certain that the file opened. Quit if the file fails to open. 
+Reads scores until an end of file condition is encountered. 
+Tests the state of the stream after each read to make certain that the data is valid. 
+Submitting Your Program
+Once you have a working solution, the process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your activity diagram. 
+Your source code (.cpp) file and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Your completed worksheet. 
+Create a zip file containing your activity diagram, source code file (lab08.cpp), executable file (lab08.exe), and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab08your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab08rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The gradesheet for this project is here. 
+ 

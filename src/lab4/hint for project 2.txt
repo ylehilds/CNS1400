@@ -1,0 +1,16 @@
+Hints for Project Two
+The code for this project will have several decision blocks in it. The most interesting part of the design is to make sure that you get all of these decisions correct. Take the time to walk through the problem solving discussion outlined in lab #3. Before you try to write any code, try to sketch out the steps required to solve the problem. You should end up with an activity diagram with a number of decision blocks similar to this one.
+
+
+
+
+Once you have your activity diagram finished, pick some sample test cases and using your test values trace through the diagram to make certain that you have your logic correct. Only when you are satisfied that your logic works as you expect it to should you begin to write code. 
+
+Many beginning programming students think that program design is busy work, and they make the mistake of jumping into code writing before they fully understand the logic required to solve the problem. A really good software developer will probably spend as mush as 75% of his or her time figuring out the design of their program, and then only 25% actually writing code. 
+
+The code that implements the logic in the activity diagram above can be written as: 
+
+if (Balance >= 5000.00)
+   rate = 0.05;
+else
+   rate = 0.03; 

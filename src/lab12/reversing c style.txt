@@ -1,0 +1,73 @@
+         Reversing a C-style string
+Introduction
+In this programming exercise, you will develop and test the code for a function named reverse( ). This function will take as a parameter a pointer to a character array. The array will be null terminated, so it can be considered a C-style string. Your function should reverse the string pointed to. For example, the string "Hello C++" would become "++C olleH". The return type for this function should be void. 
+
+Files Required for This Project
+Download the following file: 
+
+reverse.cpp - a program that reverses a C-style string 
+Program Specification
+The program reverse.cpp asks the user to type in a short string of words, and then reverses this string and displays it. The code is shown below: 
+
+
+// string reversal program
+// lab #13
+// pointer practice
+// *************************
+#include 
+using namespace std;
+
+void reverse(char*);
+
+int main ( )
+{
+	char buffer[80];
+	
+	cout << "\nString reversal program";
+	cout << "\nType in a short string of words.";
+	cout << "\nI will reverse them.";
+	cout << "\n:";
+	cin.getline(buffer, 79);
+	
+	cout << "\nYou typed " << buffer;
+	reverse (buffer);
+	cout << "\nReversed: " << buffer;
+	
+	cout << endl;
+	system("PAUSE");
+	return 0;
+}
+
+
+void reverse(char* string)
+{
+// You write this code
+}
+
+Your task is to design and write the code for the reverse function used in this program. The function must conform to the following specification: 
+
+The function takes a single parameter which is a pointer to the character array to be reversed. 
+The function must use pointers for any character manipulation. 
+The return type of the function is void. It does not return anything. 
+Submitting Your Program
+After you have a successfully running program, submit it as described here. 
+
+The process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code file (.cpp) and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Your completed worksheet. 
+Create a zip file containing your source code file, your executable file, and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab13your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab13rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+Print a copy of the grading sheet provided here. 
+ 

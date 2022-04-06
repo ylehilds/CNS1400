@@ -1,0 +1,24 @@
+         CNS 1400: Lab Four
+
+--------------------------------------------------------------------------------
+
+Objectives:
+This lab has several objectives: 
+
+To help you understand and correctly write if and if/else statements. 
+To help you understand and corerctly write Boolean expressions. 
+To provide you with some tools for debugging programs. 
+After completing this lab, you should be able to come up with solutions to simple computational problems that require branching based on the testing of some conditions in the program. You should be able to write a C++ program that correctly uses if and if/else statements. 
+
+You should be able to use minGW to solve syntax errors and logic errors in your program. 
+
+Study Material
+Boolean Expressions in C++ 
+Precedence Table 
+De Morgan's Law 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed worksheet along with your program for this lab. 
+Worksheet 
+
+Lab Exercise
+Debugging  

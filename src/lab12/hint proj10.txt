@@ -1,0 +1,15 @@
+Hints for Project Ten
+Store your song titles in a two dimensional array. You can determine the size of the array ahead of time, because you know how big the longest possible song title can be, and you know what the maximum number of songs can be.
+
+
+Each song title is stored as a C-string, e.g. stored as an array of characters and null terminated. 
+
+
+
+
+
+Review the program that you wrote for lab #12! 
+
+Remember that you cannot use the assignment operator on C-strings. 
+
+Remember that you cannot use the standard comparison operators on C-strings. 

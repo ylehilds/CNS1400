@@ -1,0 +1,11 @@
+         Arrays and Vectors
+From the programmer's point of view, arrays and vectors provide nearly equivalent function. The major advantage of using a vector is that the size of the vectors grows as required. The following table compares the properties of arrays and vectors.
+
+Property Arrays Vectors 
+Data Type All elements must be of the same data type All elements must be of the same data type 
+Storage Elements are stored in consecutive memory locations Elements are stored in consecutive memory locations 
+Fixed in Size Yes No, push_back operation will cause the size of the vector to increase, if necessary 
+Random Access Yes, using the [ ] operator Yes, using the [ ] operator 
+Insertion in the Middle Expensive Expensive 
+Boundary Checking No No 
+ 

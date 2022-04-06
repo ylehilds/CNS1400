@@ -1,0 +1,70 @@
+// Lab 11
+// Thinking about array issues
+// CNS 1250
+// Roger deBry
+// ----------------------------
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main ( )
+{
+	// array of grades to be assigned
+	// 91 - 100 is an A
+	// 81 -  90 is a B
+	// 71 -  80 is a C
+	// 61 -  70 is a D
+	// Below 61 is an E
+	char grades[] = {'A', 'B', 'C', 'D', 'E'};
+
+	// declare a place to hold scores read from a file 
+	int scores[5]={0};
+	
+	// declare the stream object and open the file
+	ifstream theDataFile("c:\\scores.txt");
+	if (!theDataFile)
+	{
+		cout << "\nError opening file.";
+		exit(1);
+	}
+	
+	// read the scores into the array
+	int index = 0;
+	int aScore;
+	while(!theDataFile.eof( ))
+	{
+		theDataFile >> aScore;
+		if(!theDataFile.good( )) // the read failed ...
+		{
+			if (!theDataFile.eof( )) // and it was not an eof condition
+			{
+				cout << "\nError reading file.";
+				exit(1);
+			}
+			break; // it was an eof, so break out of the loop
+		}
+		scores[index++] = aScore;
+	}
+	
+	// print out the values just read and give each a grade
+	for (int i = 0; i < index; i++)
+	{
+		cout << scores[i] ;
+		if (scores[i] < 61)
+			cout << "-" <<grades[4];  // grade is an 'E'
+		else if (scores[i] < 71)
+			cout << "-" << grades[3];  // grade is a 'D'
+		else if (scores[i] < 81)
+			cout << "-" << grades[2];  // grade is a 'C'
+		else if (scores[i] < 91)
+			cout << "-" << grades[1];  // grade is a 'B'
+		else
+			cout << "-" << grades[0];  // grade is an 'A'
+		cout << endl;
+	}
+
+	system("PAUSE");
+	return 0;
+}
+

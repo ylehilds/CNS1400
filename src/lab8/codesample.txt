@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main( )
+{
+   int numOne, numTwo, numThree;
+
+   // Open the file
+   ifstream theFile("learn.txt");
+
+   theFile >> numOne >> numTwo >> numThree;
+
+
+   // print the results
+   cout << "\nThe values were " << numOne
+        << ", " << numTwo
+        << " and " << numThree;
+
+   system("PAUSE");
+   return 0;
+}
+
+

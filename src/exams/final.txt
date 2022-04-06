@@ -1,0 +1,50 @@
+CNS 1400 Final Exam Study Guide
+The objective of this examination is to provide both you and me with some measure of the learning that you have accomplished up to this point in the semester. Learning to program is much more than just being able to regurgitate facts about a particular programming language, and the mechanics of getting a program to compile and execute. This exam will test your understanding of basic programming principles and your ability to apply those principles correctly to solve difficult computing problems. Although this exam will focus on the material most recently covered, you should consider it comprehensive. 
+
+This exam is OPEN BOOK. You may bring your textbook to class to use as a reference for C++ syntax. However, you may not use class notes, copies of slides presented in class, or crib notes of any kind. Foreign students may bring a foreign language-English dictionary to the testing center. 
+
+You will be responsible for the material discussed in class as well as the textbook reading assignments and all of the labs and programming assignments. 
+ 
+Topic Study Material 
+
+All Previous material
+
+See study guides for midterms
+   
+Arrays
+
+Demonstrate that you know how to declare and use arrays. 
+Be able to explain what an out of bounds error is and how to avoid them. 
+Show that you can correctly write loops to manipulate arrays. 
+Show that you know how to pass an array to a function. 
+Be able to explain how to sort data in an aray and how to search for data in an array. 
+Be able to describe a two dimensional array as an array of arrays. 
+Show that you know how to use the Vector template from the Standard Template Library. 
+ Arrays (Slides)
+
+Big C++ chapter 9
+
+Lab #11 
+Project #8
+ 
+Character Arrays
+
+Show that you know the difference between an array od characters and a 'C' style string. 
+Show that you can correctly use character arrays in a program. 
+Demonstrate that you understand how to do character I/O. 
+Be able to describe the correct use of the character manipulation functions of C++. 
+ Character Arrays (slides) 
+Big C++ chapter 9 
+Lab #12 
+ 
+Pointers
+
+Show that you understand the concept of a pointer. Demonstrate that you can correctly use the address-of operator and the de-reference operator. 
+Be able to explain the programming errors that can happen when using pointers. 
+Be able to explain the use of dynamic variables and the heap. Be able to discuss what a memory leak is and how to avoid them. 
+Be able to explain the important relationship between an array and a pointer. 
+ Pointers (Slides) 
+Big C++ chapter 10 
+Labs #13 and 14 
+Projects #9 and 10
+ 

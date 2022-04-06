@@ -1,0 +1,30 @@
+         Formatting Flags
+When sending output to a stream, you can format the data by setting flags in the stream. These flags are constants that are defined in the ios class. Every output stream has a function setf( ) that is used to set these flags. A flag can also be unset with the unsetf( ) function. For example, to set the fixed flag in the standard output stream, we would write 
+
+   cout.setf(ios::fixed); 
+
+The meaning of the ios flags is defined in the following table. 
+
+Flag Description Default 
+ios::fixed Floating point numbers are not written in scientific notation †. not set 
+ios::scientific Floating point numbers are written in scientific format. not set 
+ios::showpos A decimal point and trailing zeros are always shown for floating point numbers. double 
+ios::showpos A plus sign is output before positive numbers. not set 
+ios::right If this flag is set and some field width has been specified, then the next item ouput will be at the right edge of the field. set 
+ios::left If this flag is set and some field width has been specified, then the next item ouput will be at the left edge of the field. double 
+ios::dec Integers are output in decimal (base 10). set 
+ios::oct Integers are output in octal (base 8). not set 
+ios::hex Integers are output in hexadecimal (base 16). not set 
+
+† The default format is the general format. This format lets the implementation choose a format that best preserves the value being output in the space available. 
+
+Member Functions in the output stream classes that are used for formatting are summarized in the following table. Many of these functions have corresponding stream manipulator functions. To use the stream manipulator functions, you must #include iomanip.
+
+Function Description Corresponding Stream Manipulator 
+setf(ios_flag) Sets the specified flag. setiosflags(ios_flag) 
+unsetf(ios_flag) Unsets the specified flag. resetiosflags(ios_flag) 
+precision(int) Sets precision for floating point numbers. setprecision(int) 
+width Sets the output field width. Only applies to the next output. setw(int) 
+fill(char) specifies the fill character when a field is larger than the data. Default is blank. setfill(char) 
+
+ 

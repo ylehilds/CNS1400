@@ -1,0 +1,72 @@
+         Operator Precedence Table
+Operators at the top of the table have the highest precedence. Operators at the bottom of the table have the lowest precedence. Operators within the same block in the table have the same precedence. Within an expression, higher order operations are performed first. Operators with the same precedence are evaluated left to right.You can use parentheses to change the order in which operations are performed.
+
+:: Scope Resolution Operator 
+.
+->
+[ ]
+( )
+++
+--  Dot Operator
+Member selection
+Array Indexing
+Function Call
+Post-increment
+Post-decrement 
+++
+--
+!
+-
++
+*
+&
+new
+delete
+sizeof
+( )  Pre-increment
+Pre-decrement
+Not
+Unary minus
+Unary plus
+Dereference
+Address of
+Create (allocate)
+Destroy (deallocate)
+Size of Object
+C Type Cast  
+*
+/
+%
+ Multiply
+Divide
+Remainder (modulus)
+ 
+<
+>
+<=
+>=
+ Less Than
+Greater than
+Less than or equal
+Greater than or equal  
+==
+!=
+ Equal
+Not Equal  
+&&  And  
+||  Or  
+=
++=
+-=
+*=
+/=
+%=  Assignment
+Add and assign
+Subtract and assign
+Multiply and assign
+Divide and assign
+Remainder and assign 
+? :  Conditional Operator  
+throw  Throw an exception  
+,  Comma Operator  
+ 

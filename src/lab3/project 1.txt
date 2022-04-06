@@ -1,0 +1,33 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 1: Freeway Reconstruction
+
+--------------------------------------------------------------------------------
+
+Due Date:
+Programs must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59pm on Saturday will receive 5 bonus points, only if the program completely meets the specifications, and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+gets input from cin 
+uses arithmetic expressions and assignment; and 
+formats output and sends it to cout 
+Project:
+GoodGuy's Delivery service operates a fleet of delivery vehicles that operate between Provo and Salt Lake City. Several years ago they published a time table based on the I15 reconstruction work. Now that the work on I15 is complete, GoodGuys has found that their delivery times have improved, on average, by 25%. They would like a program that accepts as input a starting time and ending time for a journey, based on the old timetable. The program will then calculate the new ending time for the journey and print out the results. Your program need not worry about going across day boundaries. Times are represented in a 24 hour clock, or military time, such as 0955 (9:55am) or 1330 ( 1:30pm). Be careful, you cannot simply subtract one 24 hour clock time from another and get the correct answer. You have to convert everything into minutes first! 
+
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+goodGuys.cpp 
+goodGuys.exe 
+Hints
+You can find some hints for this problem here. 
+
+Grading
+When submitting your program, print out a copy of the gradesheet and staple it to a copy of your source code. This should be turned in to your instructor by the due date for this program. The Grade sheet is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

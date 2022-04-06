@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main( )
+{
+   int age;
+   string name;
+
+   // Open the file
+   ifstream theFile("learn08b.txt");
+
+   // If the open is successful, read the file
+   if (theFile.good( ))
+   {
+       theFile >> age;
+
+       // the name contains a string so we have to use getline
+       getline(theFile, name);
+
+       // print the results
+       cout << "\nName: " << name;
+       cout << "\nAge: " << age;
+   }
+   else
+      cout << "\nCould not open the file.";
+
+   system("PAUSE");
+   return 0;
+}
+
+

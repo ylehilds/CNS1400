@@ -1,0 +1,38 @@
+         Dynamically Allocated Arrays
+Introduction
+In this programming exercise, you will create and use a dynamically allocated array. Be sure to read the supplementary material on dynamic allocation before you do this exercise. Keep in mind the important relationship between a pointer and an array. 
+
+Program Specification
+Your program will operate as follows: 
+
+Your program will tell the user that they will be entering in a sequence of integer values. 
+Your program will prompt the user to enter in the number of values in the sequence. The value must be positive and non-zero. Store this value in an integer variable named size. 
+Use this value to dynamically allocate an array of size integers. 
+Create a loop that will prompt the user to enter in size integers. Get the user's input for each and store it in the corresponding element of the array that you created in step 3. 
+Reverse the order of the elements in the array. 
+Print out the elements of the array. They should print in the reverse order from which they were entered by the user. Note that you must actually change the order in which the elements are stored in the array, not simply print them out in reverse order! 
+Release the memory allocated for the array. 
+A sample executable can be found here. 
+
+Submitting Your Program
+After you have a successfully running program, submit it as described here. 
+
+The process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code file (.cpp) and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Your completed worksheet. 
+Create a zip file containing your source code file, your executable file, and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab14your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab14rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The grading sheet program is here. 
+ 

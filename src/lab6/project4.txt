@@ -1,0 +1,48 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 4: Four Function Calculator
+
+--------------------------------------------------------------------------------
+
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59pm on Saturday will receive 5 bonus points only if the program completely meets the specifciations, and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+gets input from cin, 
+uses arithmetic expressions, assignment, and control structures, 
+uses programmer written functions, and 
+formats output and sends it to cout 
+Project:
+In this program you will create a four function calculator. Your calculator must work until the user indicates that he or she is finished. You must write four user defined functions. Each function takes two double variables as parameters and returns a double result. 
+
+The first function returns the sum of the two parameters 
+The second function returns the difference between the two parameters 
+The third function returns the product of the two parameters 
+The fourth function returns the quotient of the two parameters 
+Your program should work as follows: 
+
+Prompt the user to enter in a number, an operator, and another number, separated by spaces. 
+Get the input. Validate the input to insure that the operator is either +, -, *, or / Re-do this step if the input is not valid. You may assume that numbers are entered where they are required. 
+Based on the value of the operator, call the correct function to do the required operation. 
+Display the result in the form
+   number operator number = answer 
+Ask the user if they want to do another calculation. 
+Accept either "y" or "n" as input. Validate the input and re-do this step if it is not correct. 
+If the user selects "y" start back at step one. If the user selects "n", quit. If an invalid choice is entered, tell the user and ask for their input again. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+calculator.cpp 
+calculator.exe 
+Hints
+You can find some hints on this project here 
+
+Grading
+When submitting your program, print the grading sheet and attach it to a copy of your source code. These should be turned in to your instructor by the due date specified for this program. The grade sheet is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

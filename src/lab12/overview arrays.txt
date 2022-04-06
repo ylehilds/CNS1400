@@ -1,0 +1,92 @@
+         Character Arrays
+Introduction
+You can declare an array of any data type. In this lab we will examine arrays of characters. An array of characters is declared similar to other types of arrays. The following example declares myString to be an array of 30 characters. 
+
+   char myString[30]; 
+
+We often refer to such an array as a C-style string. This is because this is the way that strings are represented in the C language, which has no string class. The string class we have been using up to this point is the more modern way of handling strings of character data, but you should be familiar with C-style strings, because they are still widely used. 
+
+The Null Terminating Character
+Consider the declaration 
+
+   char myString[ ] = "I Love C++"; 
+
+This style of declaration stores the characters I Love C++ in the array myString. Note that you are not required to specify the size of the array. The compiler will figure it out for you. In this case, the size of the array will be 11 characters. The string I Love C++ is only 10 characters long. What is the extra character for? In order for many of operations on C-style strings to work properly, we must know where the end of the string is. In our C-style string, the end of the string is marked with a Null terminating character, '\0'. Thus, in storage myString would look like this:
+
+ 
+
+The null terminating character is literally the value of zero, and takes up one character space in the array. In the array declaration above, the compiler automatically creates the null terminating character for you, and adds it to the end of the array. When you declare an array of characters, you must always account for the space required for the null terminating character. So, for example, if you think that the longest string of characters you will ever store in an array will be 100, then you should declare the array with 101 spaces so that there is always room for the null terminating character. 
+
+Note that you can declare an array of characters this way: 
+
+   char myString[ ] = {'B', 'l', 'u', 'e'}; 
+
+In this rare case, the space allocated for the array will just be enough to hold the characters B, l, u, and e. No space is allocated for the null terminating character. This is truly just an array of characters. It is not considered a C-style string, since it has no null terminating character at the end. 
+
+Peculiarities of char Arrays
+There are some peculiarities with char arrays that you should be familiar with. Otherwise, you are likely to write programs that won't work correctly. Consider once again the declaration 
+
+   char myString[30]; 
+
+After making this declaration, you might be tempted to assign a string of characters to the array by writing 
+
+   myString = "Hello Bob!"; 
+
+This statement won't compile. Although you can assign a value to the array initially by writing 
+
+   char myString[ ] = "Hello Bob!"; 
+
+you cannot assign a value to the array once the array has been declared. To do this, you must use the strcpy family of functions. For example, to do the assignment above, we would have to write 
+
+   strcpy(myString, "Hello Bob!"; 
+
+In this example, the strcpy( ) function copies the characters Hello Bob! into the character array myString. The null terminating character will be placed at the end the array myArray after the characters have been copied. Notice that the strcpy( ) function does not bother to see if the target array is big enough to hold the characters that are being copied into it. This makes the use of the strcpy( ) function very dangerous to use, because it may result in array over-runs. A much safer version of the strcpy( ) function is strncpy( ). If the array myString had been declared to have a length of 30, we might write 
+
+   strcpy(myString, "Hello Bob!", 29); 
+
+This statement guarantees that no more than 29 characters will be copied into myString. This leaves room for the null terminating character at the end of the array. 
+
+Another problem with character arrays is doing comparisons. For example, if you were to write the statement 
+
+   if (myString == anotherString) 
+      cout << "\nThe strings are equal!"; 
+
+your program would compile okay, but you might not get the expected results. The problem is that the expression 
+
+   (myString == anotherString) 
+
+does not compare the contents of the two arrays. It actually compares the addresses of the two arrays. The reason for this will become more apparent later on. Obviously, this is not what we want. To compare the contents of two character arrays, you must use the family of strcmp( ) functions. The proper code to write to compare the two arrays is 
+
+   if (strcmp(myString, anotherString)==0) 
+      cout << "\nThe strings are equal!"; 
+
+The strcmp( ) function works this way: if the two strings are equal, the function returns a zero. If the left hand string is less than the right hand string, the function returns a value less than zero. If the left hand string is larger than the right hand string, the function returns a value greater than zero. What does greater than or less than mean for an array of characters? Comparisons of character arrays are done in lexicographic order. Lexicographic order is sometimes called dictionary order. So, when comparing, think of the order that the words in the array would appear in a dictionary. For example, "cat" would compare as less than "dog". 
+
+I/O with char Arrays
+C-style strings can be ouptut using the normal stream insertion operator. For example, to send the contents of myString to standard output we would write 
+
+   cout << myString; 
+
+This statement outputs characters from the array myString until a null terminating character is encountered. 
+
+You can use the stream extraction operator to fill a char array. Conveniently, the stream extraction operator will store a null terminating character automatically at the end of the array. However, you should be careful to note that the stream extraction operator stops at white space. So given the statement 
+
+   cin >> myString; 
+
+if the user types in the string 
+
+   I Love C++, 
+
+only the character ' I ' would get stored in the character array. To read in an entire line of test, including spaces, you need to use the getline( ) function. The form of the getline( ) function is slightly different than the one that you are used to using with the string class. To use it you would write 
+
+   cin.getline(myString, 80); 
+
+This form of the getline( ) function is preferred because it limits the number of characters that will be read into the array. In this case, the statement would read no more than 80 characters, and it will store a null terminating character at the end of the array. In this case, the array must have enough space for 81 characters. 
+
+Finally, we will look at the get( ) function. The get( ) function reads one character from the input stream, no matter what the character is. In particular, it will read blanks and the newline character just like any other characters. For example 
+
+   char inputChar;
+   cin.get(inputChar); 
+
+will read in a single character and store it in the char variable inputChar. The character just read in can be tested using the character manipulation functions described in the other reading assignment for this lab. 
+ 

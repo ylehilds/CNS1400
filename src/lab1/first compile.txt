@@ -1,0 +1,29 @@
+         Lab One: Programming Exercise
+Exercise
+Before starting MinGW, be sure that you have created a folder in which to store your CNS 1250 work. Inside this folder, create a 2nd folder for this lab. Now, start up the MinGW Development Studio on your computer. Start a new Project and store it in the folder that you created for this project. After you have created the Project, create a new C/C++ Source code file. Once you have this file created, you can then type in the lines of C++ source code shown in the figure below. Pay attention to the spacing and indentation used in the code. Substitute your own name and course information where appropriate. When you are done, save the text file in the folder that you have prepared. Save it as lab01.cpp. The code you have written inside the Text Exitor Window should look something like this:
+
+ 
+Now you will compile and link your program. If you get errors when compiling, look back over the code you have entered, and make sure that it exactly matches what is shown here. Once you have a successful build, execute your program. You should see a DOS window open up and that looks something like the following. Remember that the information displayed must be yours, not the example shown here.
+
+ 
+To close this window, hit the Enter key. If things went well, you have successfully created, compiled, and executed your first C++ program. 
+
+Submitting Your Program
+Now that you have a running program, it is time to submit your assignment for grading. The process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items, or for being turned in late. Submissions must include 
+
+Only your source code (.cpp) file, an executable file (.exe), and a copy of your completed worksheet. Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Create a zip file containing your source code file (lab01.cpp), your executable file (lab01.exe), and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab01your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab01rkd.zip
+ 
+
+
+Upload your zip file to WebCT by using the "Projects and Labs" Link in WebCT. Don't forget to click on the "SUBMIT" button after you have uploaded your files. 
+
+The gradesheet for this project is here. You do not need to make a copy of this gradesheet. It is provided here so that you can see how this project will be graded. 
+ 

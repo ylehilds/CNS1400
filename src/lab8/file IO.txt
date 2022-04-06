@@ -1,0 +1,97 @@
+         File I/O
+Introduction
+The fundamental building block of all input and ouput(I/O) in C++ is the stream. C++ contains a number of stream classes that are used for I/O operations. You have used objects of the istream class (cin) and the ostream class (cout) since the beginning of the semester. In this exercise we will use two more classes, ifstream for reading data from a file and ofstream for writing data to a file. Files may be of two basic types, text or binary. Text files contain readable character data. All numbers are converted to their character equivalents before being written to the file, and are converted to their internal binary representation after being read from the file. This works in exactly the same way as writing to the display and reading from the keyboard. Binary files on the other hand contain data that is stored in the internal binary representation of the computer. While this is more efficient, it is hardware specific. You may not be able to read a binary file if it was created on a computer with a different computer architecture than yours. 
+
+The ifstream class and the ofstream class contain functions and operators that work identically to the way that they do for the istream and ostream classes. For example, the ifstream class uses the stream extraction operator to read data from a file, in exactly the same way that the stream extraction operator reads data from cin. 
+
+Declaring and Opening a Stream
+Declaring a Stream Object: You declare a stream object just as you do any other variable. For example, to create an ifstream object you would write 
+
+     ifstream theTextFile; 
+
+In this case the stream object theTextFile is created. It is an object of the ifstream class. 
+
+Opening a Stream: Before you can read from a file or write to a file, you must open the file. This can be done when the object is declared, by writing 
+
+     ifstream theTextFile(someData.txt); 
+
+The parameter someData.txt is the path to the file. If no path is given, then the file is assumed to be in the same directory as the program that you are executing. If the path that you use as a parameter contains a backslash, you must use two backslashes, for example 
+
+     ifstream theTextFile(c:\\someData.txt); 
+
+You can also open a file by using the open( ) function after declaring the stream object. For example 
+
+     ifstream theTextFile;
+     theTextFile.open(someData.txt) 
+
+Reading from a File
+Once the file has been opened, you read from the file just as you would from the keyboard. All of the same rules apply. For example, 
+
+     ifstream theTextFile(someData.txt);
+     int number;
+     float size;
+     theTextFile >> number >> size;
+
+
+The functions get( ) and getline( ) also work as they do for cin. 
+
+Writing to a File
+Writing to a file is similar to writing to cout. The following example opens the file myFile.txt and writes two integer values to the file someData.txt: 
+     ofstream theTextFile(someData.txt);
+     int numOne;
+     int numTwo;
+     theTextFile << numbOne << ' ' <<size;
+
+
+Notice two important things in this example. First of all, the stream object we created used the ofstream class, because we are going to write to the file. Secondly, we inserted a blank space character ' ' between the two integer values that we wrote out. The blank space character is white space necessary to tell the stream extraction operator to stop, when this data is read in at a later time. Otherwise the digits of the two integers we wrote to the file would be read in as a single integer value. 
+
+Stream States
+All objects of the stream classes that we have studied contain a set of flags that describe the state of the stream. These flags are normally obtained from the object using the following functions: function Returns TRUE if 
+good( ) the last read operation was successful 
+fail( ) the last read operation failed to read the expected data 
+bad( ) the last read operation failed and the underlying file may be bad 
+eof( ) the last read operation failed because an end of file (eof) was encountered 
+
+
+Under normal circumstances, when an I/O error occurs, your program ignores the error and just goes on as if everything worked okay. Many errors in C++ programs that do input and output occur because the programmer does not check the state of the stream objects after doing an I/O operation.
+
+Rule of Thumb
+check the state of the stream after every I/O operation!
+ 
+
+
+Testing to see if a File Opened
+A common error is to try to open a file, but not bother to test to see if the file actually opened. The following example illustrates how to check to see that a file opened correctly: 
+
+     ifstream theTextFile(someData.txt);
+     if (theTextFile.fail( ))
+     {
+        cout << "\nFile did not open.";
+        exit (1);
+     }
+     else
+     {
+         // go ahead and read the data from the file
+     }
+
+
+Testing for End of File (eof)
+What do you do if you want to read data from a file, but you don't know how much data is in the file? When you try to read past the end of a file, the eof flag gets set in the stream object. The following example reads integer data from a file and prints it until it reaches the end of the file. Notice that you must test after every read to make certain that you have valid data. 
+
+     ifstream theTextFile(someData.txt);
+     if (theTextFile.fail( ))
+     {
+        cout << "\nFile did not open.";
+        exit (1);
+     }
+     else
+     {
+        while (!theTextFile.eof( ))
+        {
+            theTextFile >> intValue;
+            if (!theTextFile.eof( ))
+                cout << intValue << endl;
+        }
+     }
+
+ 

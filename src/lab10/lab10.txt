@@ -1,0 +1,32 @@
+         CNS 1400: Lab Ten
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to help you better understand how to design and write your own classes. 
+
+After completing this lab, you should be able to design and create your own classes and use them to solve compuational problems. 
+
+You should be able to determine the properties and operations for a class 
+You should be able to create a class diagram. 
+You should be able to write a class definition. 
+You should be able to write a class implementation. 
+You should understand the concept of cohesion. 
+You should be able to correctly pass objects as parameters. 
+Study Material
+More on Classes 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+
+Worksheet 
+
+Lab Exercise
+Designing your own classes 
+
+Files
+Code for the completing the Programming Assignment:
+   lines.cpp
+   lines.h
+   driver.cpp
+
+ 

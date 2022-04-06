@@ -1,0 +1,22 @@
+         CNS 1400: Lab One
+
+--------------------------------------------------------------------------------
+
+Objectives:
+This lab has several objectives: 
+
+To help you understand the basic elements of a C++ Program. 
+To teach you how to create, compile, link and execute a simple C++ program. 
+To demonstrate the use of good style elements when writing a C++ program. 
+After completing this lab, you should be able to create, compile, link and execute a simple C++ program on your own, using the tools described in the lab. You should have a thorough understanding of the basic elements of a C++ program and demonstrate your mastery of them in programs that you write. Your programs should also demonstrate your understanding of the style guide provided as part of this lab. Finally, you should be able to explain how data is represented in the computer, and demonstrate that you understand the concepts of the stack, the data segment, and the heap. 
+
+Study Material
+Creating, Compiling and Linking with MinGW 
+The Basic Elements of a C++ Program 
+CNS 1250 Style Guide 
+Lab Exercise
+Creating Your First C++ Program 
+Worksheet
+Print a copy of the worksheet located at the following link. Write your answers to the questions in the spaces provided on the document. Include your completed worksheet in the zip file containing your program. Submit this zipfile to WebCT. 
+Worksheet 
+ 

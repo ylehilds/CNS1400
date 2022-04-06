@@ -1,0 +1,17 @@
+         De Morgan's Law
+Suppose that you need to test a set conditions to see if they are all not true. For example, you want to go to work if it is not Saturday, Sunday, or a Holiday. The code to make this test might look something like 
+
+   if ( ! (today == "Sunday" || today == "Saturday" || today == "Holiday")
+       cout << "\nGo to Work!"; 
+
+Sometimes the use of the not operator can be confusing when applied to and and or conditions like this. The British Mathemetician Augustus De Morgan (1806 - 1871) developed a scheme for simplifying expressions that use the not operator. De Morgan's Law has two forms: 
+
+    ! ( A && B)     is the same as !A || !B
+    ! ( A || B)     is the same as !A && !B
+
+
+So, in the formulation of our code, we could equally as well have written 
+
+   if ((today != "Sunday" && today != "Saturday" && today != "Holiday")
+       cout << "\nGo to Work!"; 
+ 

@@ -1,0 +1,23 @@
+         CNS 1400: Lab Seven
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to help you understand how pass by value and pass by reference work. 
+
+After completing this lab, you should be able to come up with solutions to problems that use programmer written functions where values can be passed by value and/or by reference. You should be able to write proper function prologues and use the assert macro to test preconditions. 
+
+Study Material
+Function Prologues and Assertions 
+Code Walkthroughs 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+
+Worksheet 
+
+Lab Exercise
+Calculating Change 
+
+Files
+Code file for Programming Project 
+ 

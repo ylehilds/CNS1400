@@ -1,0 +1,79 @@
+CNS 1400 Midterm #2 Study Guide
+The objective of this examination is to provide both you and me with some measure of the learning that you have accomplished up to this point in the semester. Learning to program is much more than just being able to regurgitate facts about a particular programming language, and the mechanics of getting a program to compile and execute. This exam will test your understanding of basic programming principles and your ability to apply those principles correctly to solve difficult computing problems. Although this exam will focus on the material most recently covered, you should consider it comprehensive. 
+
+This exam is OPEN BOOK. You may bring your textbook to class to use as a reference for C++ syntax. However, you may not use class notes, copies of slides presented in class, or crib notes of any kind. Foreign students may bring a foreign language-English dictionary to the testing center. 
+
+You will be responsible for the material discussed in class as well as the textbook reading assignments and all of the labs and programming assignments. 
+ 
+Topic Study Material 
+Functions
+
+Demonstrate that you know how to use the built-in functions discussed in class. 
+ceil( ) 
+floor( ) 
+rand( ) 
+Be able to correctly write and use a stand-alone function in C++. 
+Be able to describe the concept of scope and how it effects the execution of a program. 
+Be able to explain the terms function prologue and function prototype. 
+Show that you understand how functions are called and how they return control to main. 
+ Functions (Slides)
+
+Big C++ chapter 5
+
+Lab #6 
+Project #3
+ 
+Parameters and Function Overloading
+
+Show that you know the difference between passing parameters by value and passing parameters by reference. Show that you know when and how to use each. 
+Demonstrate that you know what a side effect is, and how to avoid side effects. 
+Be able to discuss the idea of function overloading. Show that you know how to overload a function. 
+Be able to explain how type conversions can affect function overloading. 
+Show that you can write functions that use default arguments. 
+Be able to explain the notion of a driver and a stub. Be able to demonstrate how you would use them in a program. 
+ Parameters and Overloading (slides) 
+Big C++ chapter 5 
+Lab #7 
+Project #4
+ 
+Streams and File I/O
+
+Show that you understand the concept of a stream. Demonstrate that you can use streams correctly in a C++ program. Know the basic stream classes discussed in class. 
+Show that you understand how to read and write text data to a file. 
+Demonstrate that you understand how to use the stream manipulation functions. 
+Show that you understand how to use stream state to handle input and output errors, including end-of-file. 
+ Streams and File I/O (Slides) 
+Big C++ chapter 12 
+Lab #8 
+Project #5
+ 
+Structs and Classes
+
+Demonstrate that you know how to use structs in a C++ program. 
+Show that you know the relationship between an object and a class. 
+Show that you understand how to create your own classes in a C++ program. Demonstrate that you know how to structure this code correctly into .h and .cpp files. 
+Be able to discuss the ideas of class properties and class behaviors. 
+Be able to discuss the idea of strong coherence in a class. 
+Show that you can write and correctly call member functions in a class. 
+Sow that you understand scope as it applies to classes and objects. 
+Show that you understand how access modifiers are used in a class definition. 
+Show that you can create a class diagram using proper UML notation. 
+Show that you can translate a UML class diagram into code. 
+ Structs and Classes (Slides) 
+Big C++ chapter 6 
+Lab #9 
+Project #6
+ 
+Constructors and Other Tools
+
+Demonstrate that you know how to create and use constructors in a C++ program. 
+Show that you know what constructors do and how they work. 
+Show that you understand how to use an initializer list in a constructor, and be able to explain the advantages of using an initializer list. 
+Be able to describe the differences between a default constructor and a parameterized constructor. Be able to explain the conditions under which each is used 
+Show that you understand the notion of composition as it relates to class design. 
+Be able to demostrate the use of static data and static functions in a class. 
+ Constructors and Other Tools (slides) 
+Big C++ chapter 6 
+Lab #10 
+Project #7 
+ 

@@ -1,0 +1,43 @@
+         Programming Exercise: Using Loops, Branches, and Random Numbers
+Introduction
+You will create a small program that tests your ability to use the concepts covered in this lab, namely branches, loops, and random numbers. 
+
+The problem
+For this exercise, you will be creating a program that simulates rolling a pair of dice. Your program will perform the following steps: 
+
+Seed the random number generator 
+Ask the user if they want to roll the dice 
+Get the user's answer 
+If the user responds with a 'y' then 
+Generate two random numbers in the range 1 - 6 
+If the two numbers are 6 and 6, display the message "You rolled boxcars" 
+If the two numbers are 1 and 1 display the message "You rolled snake-eyes" 
+In all other cases display the message "You rolled ..." and show the values of the two random numbers 
+Return to step 2 and ask the user again if they want to roll the dice. 
+If the user responds with a 'n', print a goodbye message and quit. 
+Deriving the Solution
+This program is an application of the things that you have learned in this and the previous lab. To begin, draw an Activity Diagram that describes the steps I have outlined above. Keep the activity diagram in front of you while writing your program. 
+
+Writing the Code
+Write the program, following the steps in your activity diagram. Trace through your code by hand and see if it makes sense to you. Then compile your code. It may take several tries to get a program that has no syntax errors. Once your code compiles successfully execute your program and test it. Use the debugger if you need to see what is happening as your program executes. 
+
+Submitting Your Program
+Once you have a working solution, the process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code (.cpp) file and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. Your name, course/section number, instructor name, and date must be included as comments in each source code file. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. 
+Your activity diagram for this lab. 
+Your completed worksheet for this lab. 
+Create a zip file containing these files. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab05your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab05rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The gradesheet for this lab is located here. 
+ 

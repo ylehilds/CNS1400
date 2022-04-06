@@ -1,0 +1,37 @@
+// This program will make change
+// Type your file prologue here!
+#include <iostream>
+using namespace std;
+
+// The function prototype
+int computeChange(int& changeValue, int coinValue);
+
+// some constants
+const int COINS[ ] = {50, 25, 10, 5, 1};
+const string COIN_NAMES[ ] = {"Halfs", "Quarters", "Dimes", "Nickels", "Pennies"};
+const int NUM_COINS = 5;
+
+
+int main ( )
+{
+	int money;  // the value we want to count change for
+	
+	cout << "\nI will make change for you.";
+	cout << "\nEnter in an amount between 1 and 99: ";
+	cin >> money;
+	
+	cout << "\nFor " << money << " you get:";
+	for (int i = 0; i < NUM_COINS; i++)
+	{
+		cout << "\n" << computeChange(money, COINS[i]) << " " << COIN_NAMES[i];
+	}
+	cout << endl;
+	
+	system("PAUSE");
+	return 0;
+}
+
+int computeChange(int& changeValue, int coinValue)
+{
+	// write the code here for the computeChange function
+}

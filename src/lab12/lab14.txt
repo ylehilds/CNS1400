@@ -1,0 +1,25 @@
+         CNS 1400: Lab Fourteen
+
+--------------------------------------------------------------------------------
+
+Objectives:
+The objective of this lab is to build your understanding of dynamic allocation and demonstrate the use of a dynamically allocated array. 
+
+After completing this lab, you should be able to 
+
+Explain how dynamic allocation works. 
+Tell where in memory dynamically allocated data is stored. 
+Write a program that dynamically allocates an array. 
+Explain how to release dynamicaly allocated memory. 
+Study Material
+Summary of Key Points 
+Worksheet
+Print a copy of the worksheet located at the following link. Do the Learning Exercises and write your answers to the questions in the spaces provided on the document. Turn your completed papers in as directed by your instructor. 
+
+Worksheet 
+
+Code for worksheet 
+
+Lab Exercise
+Dynamically Allocated Arrays 
+ 

@@ -1,0 +1,24 @@
+         CNS 1400: Lab Two
+
+--------------------------------------------------------------------------------
+
+Objectives:
+This lab has several objectives: 
+
+To help you understand how data is represented in the computer 
+To teach you how to do simple console input and output in a C++ program 
+To help you understand data conversions 
+After completing this lab, you should be able to write simple C++ programs on your own that get user input from the keyboard and display output in a console window. You should understand how data is stored in the computer and how and when data conversions are done, and be able to demonstrate your mastery of these concepts in programs that you write. 
+
+Study Material
+The Digital PDP-1 Handbook 
+How data is Stored in the Computer 
+C++ Console I/O 
+Worksheet
+Do this worksheet before you do the Lab Exercise. Print a copy of the worksheet located at the following link. Write your answers to the questions in the spaces provided on the document. Include your completed worksheet in the same zip file as your program. 
+
+Worksheet 
+
+Lab Exercise
+Creating a Program that does I/O 
+ 

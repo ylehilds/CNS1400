@@ -1,0 +1,65 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 7: Counter Class
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59 on Saturday will receive 5 bonus points, only if program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+contains a simple class defintition 
+creates an object of the class 
+sends messages to the object and 
+formats output and sends it to cout 
+Project:
+
+
+
+In this project you will create a class that models a simple mechanism used to count things. Your counter will only deal with integer values. The count cannot be negative. You should include the following functions in your Counter class: 
+
+A function to add one to the current count. 
+A function to subtract one from the current count. 
+A function to reset the count to zero. 
+A function that returns the current count. 
+Do not write a constructor for this class. 
+
+Write a main( ) function that uses this class 
+
+Program:
+Your program should work as follows: 
+
+Display your student information 
+Create a Counter object. 
+Write a loop that: 
+Prompts the use with the following menu: 
+    1 - add 1 to Counter
+    2 - subtract 1 from Counter
+    3 - display contents of Counter
+    4 - reset counter
+    5 - exit program
+ 
+
+
+Gets the user's input 
+Tests to make sure that a valid option was chosen 
+If an invalid option was selected, then bo back and prompt again. 
+Otherwise perform the desired operation. 
+Continue in this loop until the user picks the exit option. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+counter.h 
+counter.cpp 
+driver.cpp 
+project07.exe 
+Your class diagram 
+Hints
+If you need some help writing the code for this project, there are some hints here. 
+
+Grading
+The grade sheet for this project is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

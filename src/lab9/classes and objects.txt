@@ -1,0 +1,80 @@
+         Classes and Objects
+Objects
+ 
+We briefly discussed the notion of objects and classes at the beginning of the semester. Every program that we have written so far has used objects of the istream and ostream classes to do I/O. We have also created objects of the String class. Now it is time to better understand classes and objects, and begin to create our own classes. Being able to design and create your own classes is a critical skill in Object Oriented programming. 
+
+Any time that you find yourself wanting to use a set of closely related data elements in a program, or you are modelling something in the real world, you should consider creating an object to hold and manage that data. Objects are key to understanding object-oriented technology. You can look around you now and see many examples of real-world objects: your dog, your desk, your television set, your bicycle. In this discussion we will use the example of a Token vending machine. These real-world objects share two characteristics: They all have state and behaviour. For example, dogs have state (name, color, breed, hungry) and behavior (barking, fetching, and wagging tail). A token vending machine has a state (the number of tokens it contains) and behaviour (vending tokens and adding tokens). 
+
+Software objects are modeled after real-world objects in that they too have state and behavior. A software object maintains its state in one or more variables. A variable is an item of data named by an identifier. A software object implements its behavior with functions. 
+
+
+Definition
+An object is a software bundle of variables and related functions. 
+ 
+
+You can represent real-world objects by using software objects. Everything that the software object knows (state) and can do (behavior) is expressed by the variables and the functions within that object. A software object that models a token vending machine would have a variable that indicated the machines current state (it has 27 tokens in it). These variables are formally known as instance variables because they contain the state for a particular token vending object, and in object-oriented terminology, a particular object is called an instance. The following figure illustrates a token vending machine as a software object. 
+
+ 
+
+In addition to its variables, the software token vending machine would also have functions to add tokens to the machine, get a token from the machine, and count the number of tokens in the machine. These functions are formally known as member functions. Note that functions are used to inspect or change the state of a particular token vending machine instance. 
+
+The object diagram shows that the object's variables make up the center, or nucleus, of the object. Functions surround and hide the object's nucleus from other objects in the program. Packaging an object's variables within the protective custody of its functions is called encapsulation. This conceptual picture of an object ? a nucleus of variables packaged within a protective membrane of functions ? is an ideal representation of an object and is the ideal that designers of object-oriented systems strive for. 
+
+Encapsulating related variables and functions into a neat software bundle is a simple yet powerful idea that provides two primary benefits to software developers: 
+
+Modularity The source code for an object can be written and maintained independently of the source code for other objects. Also, an object can be easily passed around in the system. You can give your token vending machine to someone else, and it will still work. 
+Information Hiding An object has a public interface that other objects can use to communicate with it. The object can maintain private information and functions that can be changed at any time without affecting the other objects that depend on it. You don't need to understand the mechanism inside the token vending machine to use it. 
+Classes
+How do you create these software objects. In order to build an object, the computer needs a bluprint, or a plan for the object. In C++ and other object oriented languages, these blueprints are called classes. Thus, the declaration 
+ 
+    TokenGiver tokenMachine; 
+ 
+Declares the object tokenMachine to be an object of the TokenGiver class. When this declaration is executed, the TokenGiver class (blueprint) is consulted and storage is allocated to hold the instance data for the object. Then the data members in the object are set to their initial values by the class's Constructor. 
+
+The class Definition for the TokenGiver class might look something like the following: 
+
+class TokenGiver
+{
+    private:
+        int numTokens;
+    public:
+        TokenGiver( );
+        TokenGiver( int );
+        void addTokens( int );
+        void getToken( );
+        int countTokens( );
+};
+
+Notice the keyword private in the class definition. It says that all of the items following the keyword, up to but not including the keyword public are hidden. That is, no code in your program can see the data member numTokens, except for the member functions that belong to the class. The variable numTokens is called member data of the class. Normally we make all member data private. 
+
+The keyword public says that the elements that follow it are visible from outside of the object. Member functions are almost always declared as public, so that code outside of the object can ask for these functions to be executed. Your program manipulates the data inside of the object through it's public functions. Thus we often refer to the public members of a class as it's interface. 
+
+Constructors
+Every class must have a constructor. If you don't write a constructor, the compiler creates one for you, but the constructor does not do anything. The reason we write constructors is to initialize member data in an object when it is created. Note that the constructor does not create the object, it only initializes it's data members. A constructor that has no parameters is called the default constructor. In the TokenGiver class, it is written simply as 
+
+   TokenGiver( );
+
+In our case we might set the value of the data member numTokens to zero. That seems like a reasonable default. The default constructor is called when a TokenGiver object is declared by the statement 
+
+    TokenGiver tokenMachine; 
+
+Constructors are often overloaded so that we can create objects with values passed as arguments to the constructor. In our example, the constructor 
+
+   TokenGiver( int );
+
+takes a single integer parameter. This parameter is used to set the value of numTokens. 
+
+Member Functions
+Once an object has been created, we can invoke member functions of it's class to manipulate the state of the object. To call a member function, we write the object's name, followed by a dot( . ) followed by the function name and its parameters. For example, to add 7 to the value of numTokens in the TokenGiver object tokenMachine, we would write 
+
+   tokenMachine.addTokens( 7 );
+
+We often refer to this as sending a message to the object. In this case, we send the 
+   addTokens( 7 ) message to the object tokenMachine. 
+
+To output the value of tokenMachine's instance variable numTokens we would write 
+
+   cout << "\nThe number of tokens in tokenMachines = "
+        << tokenMachine.countTokens( );
+
+ 

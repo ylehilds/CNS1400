@@ -1,0 +1,74 @@
+         CNS 1250 Lab: C++ Console Input and Output
+In Lab one you discovered that cin is a variable of type istream, and that cout is a variable of type ostream. Just exactly what are istream and ostream? They are classes. 
+
+The istream Class
+The istream class is responsible for providing the operations necessary to transfer data from input devices into memory. Data members of this class hold information about the input device. The specific instance, cin, which is an object created from the istream class, is connected to the standard input device. This is normally the keyboard. The istream class also defines the Stream Extraction Operator, >>. 
+
+To get some input from the keyboard and store it in memory, we write C++ statements of the form
+
+    cin >> length;
+
+In this example, the program reads a value from the keyboard, and stores it in the variable length. To use either cout or cin, your program must include the following statements near the beginning:
+
+    #include <iostream>
+    using namespace std; 
+
+The symbols >> stand for the stream extraction operator. The stream extraction operator has to figure out how much data to extract from the input stream each time it is invoked. To do this, it reads characters until it encounters some white space. White space is defined as a blank, a tab, or a newline character. The newline character is generated when you hit the Enter key on the keyboard.
+
+The ostream Class
+The ostream class is responsible for providing the operations necessary to transfer data from memory to an output device. Data members of this class hold information about the output device. The specific instance, cout, which is an object created from the ostream class, is connected to the standard output device. This is normally the display monitor on your computer. The ostream class also defines the Stream Insertion Operator, <<. 
+
+To get some input from the memory, and write it to the display monitor, we write C++ statements of the form
+
+    cout << length;
+
+In this example, the program reads the value of length from memory, and writes it to the display. The symbols << stand for the stream insertion operator. 
+
+Input and Output Conversion
+You have learned that data is stored in various forms inside the computer. For example, the integer 5 would be stored inside the computer as the binary value 
+
+0000 0000 0000 0000 0000 0000 0000 0101
+
+
+Obviously, data written in binary is difficult for humans to interpret. We much prefer to deal with written characters for the digits 0 through 9. Data from the keyboard comes in as character data and data destined for the display is written as character data. Where does this conversion from binary to character data take place? 
+
+It turns out the the stream extraction operator and the stream insertion operator do these conversions for us. So, in our earlier example if you typed 5 on the keyboard, and executed the instruction 
+
+    cin >> length;
+
+the stream extraction operator would take the character 5 from the keyboard, convert it into the binary representation of the integer 5, and store the result in the variable length. 
+
+Formatting Numbers with a Decimal Point
+We often have decimal numbers that we want to print out in a particular format. A common case is printing out values as Dollars and Cents. To print data out in this format you would write
+
+    cout.setf(ios::fixed);
+    cout.precision(2);
+    cout << "The Price is $" << price;
+
+
+You could also write 
+
+    cout << "The Price is $" << fixed << setprecision(2) << price;
+
+
+The function setf( ) belongs to the ostream class. It sets the flag given in parenthesis. In this case, we set the ios::fixed flag and the ios::showpoint flag. The ios::fixed flag tells the computer to please print this value out in fixed point notation, not scientific notation. The ios::showpoint flag tells the computer to always print a decimal point. The precision() function also belongs to the ostream class. It tells the computer to show the number of digits after the decimal point shown in parenthesis. In this case we are telling the computer to show two digits to the right of the decimal point.
+
+Input/Output and The string Class
+The examples that we have used thus far have dealt with the input and output of numbers. How do you input and output sequences of characters such as "Hello Bob!"? Given the string declaration 
+
+    string employeeName;
+
+we can use it in an input statement by writing
+
+    cin >> employeeName;
+
+In this case, if the user types the name Bob, the stream extraction operator will read the characters 'B', 'o', and 'b' and store them in the string variable firstName. 
+
+But, what if we want to read in a string of characters that contains blanks, such as Bob Smith? Remember that the stream extraction operator stops reading when it encounters white space. As a result, we can?t use the stream extraction operator when we expect to read strings that contain blanks. Instead, use the getline function. It would look like this:
+
+    getline(cin, employeeName);
+
+This statement says, please read data from cin (the standard input device) until you encounter a newline character. Store the input data, including any blank characters, in the string object employeeName.
+
+To output a string that contains blanks, simply use the stream insertion operator. It handles the blanks correctly. 
+ 

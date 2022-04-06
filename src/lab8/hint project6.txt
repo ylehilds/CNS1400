@@ -1,0 +1,40 @@
+Hints for Project Six
+There are two problems you will face in this project. The first is to be sure that you understand the math required to solve the problem. In the program specifications, you are given the equation for wind chill as 
+ 
+     W = 35.74 + 0.6215t - 35.75 (v0.16) + 0.4275t(v0.16) 
+
+where 
+ 
+   v = wind speed in mph 
+ 
+   t = temperature in degrees Fahrenheit 
+ 
+   W = Wind chill index (in degrees Fahrenheit) 
+
+The expression 
+ 
+     (v0.16) 
+
+requires that you raise v (the wind velicity) to the 0.16 power. 
+
+The function
+ 
+     double pow(double x, double y)
+
+
+raises the value in x to the power y. 
+
+The second big problem in this project is reading in the data from the file correctly. In the sample data file provided, you will see three lines of data 
+ 
+     5 20
+     5 30
+     5 40
+
+
+The first value one each line is the temperature and the second is the windspeed. 
+
+Note the rule that was discussed in class: You should check the state of the stream after every I/O operation to make sure that the operation worked correctly. The state of the stream can be bad for a couple of reasons: 
+
+The read failed because the data was bad 
+The end of the file was encountered when trying to read some data 
+Your program should handle both conditions correctly. 

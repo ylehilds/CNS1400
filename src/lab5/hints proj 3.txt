@@ -1,0 +1,15 @@
+Hints for Project Three
+
+
+  
+
+The code for this project is quite simple. However, figuring out the algorithm will take some work. The best approach is to sit down with a paper and pencil and write down how what is going on each month. You begin with one pair of rabbits, marked (A) in the picture above. At the end of one month that pair has produced one pair of offspring, marked (B). Now you have one adult pair of rabbits and one pair of baby rabbits. Your total number of pairs of rabbits is two. 
+
+What happens the following month? Well, the initial pair of rabbits produces another pair of offspring (C). The pair of babies(B) from last month isn't old enough to have babies yet, but at one month we consider them as adults. So, they move over into the adults column. The new number of adult pairs is two and the new number of baby pairs is one.
+
+
+On your own, write down what happens each month for several more months. Now, think carefully about what you did to calculate the number of rabbits each month. Write these steps down in an activity diagram. Now you are ready to code. 
+
+To produce the table in the output, consider using tabs to move between columns. Your output line might look something like 
+
+    cout << "\n" << i << "\t" << adultRabbits << "\t" << babyRabbits << "\t" << pairs; 

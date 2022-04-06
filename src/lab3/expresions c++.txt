@@ -1,0 +1,76 @@
+         Expressions
+Writing arithmetic expressions in C++ is much like writing an algebraic expression. The following is an example of a simple C++ expression: 
+ 
+    sum = valueOne + valueTwo; 
+
+The symbols = and + are called operators. The = symbol is the assignment operator and the + symbol is the addition operator. The variables named valueOne and valueTwo are called operands. The add operator + is known as a binary operator because it takes two operands. 
+
+Operator Precedence
+When an expression contains more than one operator, C++ uses operator precedence to figure out which operation to do first. The standard arithmetic operators in C++ are +, -, *, and / for addition, subtraction, multiplication, and division, respectively. Addition and subtraction both have the same precedence. Multiplication and division also have the same precedence, but both are higher than addition and subtraction. Expressions are thus evaluated from left to right, with multiplication and division being done before addition and subtraction. These operators work on all numeric data types. Assignment is done last. 
+
+The Modulus Operator
+One additional operator, %, the modulus or remainder operator, only works with integers. Its precedence is the same as multiplication and division. 
+
+The modulus operator calculates the integer remainder when one value is divided by another. Consider the following example: 
+ 
+   int n1 = 8;
+   int m1 = 3;
+   int m2 = 2;
+   cout << (n1 % m1) // prints the value 2
+   cout << (n1 % m2) // prints the value 0
+
+
+The last two statements will result in the values of 2 and 0 being displayed. That is, 8 divided by 3 is 2 with a remainder of 2. It is the remainder that is displayed. In the second case, 8 divided by 2 is 4, with a remainder of 0. 
+
+Increment and Decrement Operators
+Because adding one to a number is such a common operation, C++ provides a shorthand way to do this with what is called the increment operator, ++.There are two forms of the operator, the pre-increment, and the post-increment. When a pre-increment operator appears in an expression, the increment is done before any other operation on that variable. If a post-increment is used, then the increment happens after any other operation on that variable. Consider the following simple example: 
+ 
+   int n1 = 8;
+   int m1 = 3;
+   int m2 = n1 * ++m1; // after execution m2 = 32 and m1 = 4
+
+ 
+Because the ++ operator appears before the identifier m1, this is a pre-increment, and the value of m1 will be incremented before the multiplication is done. Thus, the result, m2 will be equal to 32. However, in the example 
+ 
+   int n1 = 8;
+   int m1 = 3;
+   int m2 = n1 * m1++; // after execution m2 = 24 and m1 = 4
+
+ 
+the ++ operator appears after the identifier m1. This is a post-increment, so the increment happens after the multiplication. Thus the result, m2 is equal to 24, but after the statement has been executed, the value of m1 will be 4. 
+
+Conversions
+When doing arithmetic operations with mixed data types, you must understand the conversion rules for C++. Arithmetic operations require that both operands be of the same type. When the operands are of different types, a conversion is done to convert one of the types to match the other. The compiler will always do a widening conversion. That is, it will convert the lower order variable to match the higher order variable. The order of data types is shown in the following table: Data Type Order 
+double High 
+float   
+long   
+int   
+short   
+char low 
+
+
+So, in the following code, the value in m will automatically be converted to a float before the addition is done: 
+ 
+   float n = 8.7;
+   int m = 3;
+   float m2 = n + m; // the value in m is converted to a float
+
+ 
+Converting from a higher order variable to a lower order variable is called a narrowing conversion, and is never done automatically. This is particularly true of an assignment statement. For example, the code 
+ 
+   float n = 8;
+   int m = 3;
+   int m2 = n * m; // compile error - narrowing conversion required
+
+ 
+will not compile because the assignment statement requires that a narrowing conversion be done. The programmer can force the conversion by doing a cast operation. In this case we would write 
+ 
+   float n = 8;
+   int m = 3;
+   int m2 = static_cast<int>(n * m); // compiles okay.
+
+ 
+
+
+The expression n * m will be evaluated, and the resulting float will be converted to an integer before the assignment is done. The conversion truncates the floating point number. 
+ 

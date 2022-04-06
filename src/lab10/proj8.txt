@@ -1,0 +1,69 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 8: Complex Number Class
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59 on Saturday will receive 5 bonus points, only if program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+Defines a class to represent complex numbers, 
+Use a constructor to initialize a Complex Number object 
+passes and returns complex number objects from a function, 
+tests the complex number class in a driver, and 
+optionally adds and subtracts complex numbers.
+Project
+Complex numbers have the form 
+ 
+     realPart + imaginaryPart * i 
+ 
+where i is defined as the square root of (-1).
+
+You should create a class called ComplexNumber. This class will contain the real and imaginary parts of the complex number in private data members defined as doubles. Your class should contain a constructor that allows the data members of the imaginary number to be specified as parameters of the constructor. A default (non-parameterized) constructor should initialize the data members to 0.0.
+
+Your complex number class should provide the following member functions: 
+
+double GetRealPart( ) This function will return the real part of the complex number, as a double. 
+double GetImaginaryPart( ) This function will return the imaginary part of the complex number, as a double. 
+Extra Credit 
+
+Addition of two complex numbers. The function will take one complex number object as a parameter and return a complex number object. When adding two complex numbers, the real part of the calling object is added to the real part of the complex number object passed as a parameter, and the imaginary part of the calling object is added to the imaginary part of the complex number object passed as a parameter. 
+Subtraction of two complex numbers. The function will take one complex number object as a parameter and return a complex number object. When subtracting two complex numbers, the real part of the complex number object passed as a parameter is subtracted from the real part of the calling object, and the imaginary part of the complex number object passed as a parameter is subtracted from the imaginary part of the calling object. 
+You program should also include the following stand-alone function (it is not a member of the ComplexNumber class). 
+
+void printComplexNumber( const ComplexNumber& n) The function will print the Complex Number object passed as a parameter in the form 
+ 
+     realPart + imaginaryPart i 
+ 
+The realPart should be signed only if it is negative. The sign between the realPart and the imaginaryPart should be positive if the imaginaryPart is positive, and negative if the imaginaryPart is negative. If the real part is zero, only print the imaginary part, with the corrrect sign. If the imaginary part is zero, only print the real part. If the imaginary part is equal to one, just print the symbol i for the imaginary part. See the sample executable for exampoles. 
+Your program should work as follows: 
+
+Display your student information 
+Prompt the user to Enter in the values for the real and imaginary parts of a complex number. 
+Create a ComplexNumber object using the user provided values as parameters to the ComplexNumber constructor. 
+Print the value of the complex number object, using the stand-alone print function. 
+Extra Credit 
+
+Repeat the above process for a second complex number. 
+Using the member function written to add two complex numbers, add the two complex numbers together and save the result in a third complex number object. 
+Using the member function written to subtract two complex number, subtract the second complex number from the first and store the result in a fourth complex number. 
+Display the results of the addition and subtraction using the stand-alone print function, making sure that the signs are correct. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. Create a class diagram using proper UML notation, and submit it with your grade sheet and source code. 
+
+File(s) to Submit:
+
+testComplex.cpp 
+complexNumber.cpp 
+complexNumber.h 
+testComplex.exe 
+Your class diagram 
+Hints
+If you need some hints to solve this problem, check here. 
+
+Grading
+The grade sheet for this project is here 
+
+Sample Output:
+ 
+You can get an executable (base program only) that runs correctly here! 

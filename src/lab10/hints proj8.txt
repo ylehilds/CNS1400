@@ -1,0 +1,20 @@
+Hints for Project Eight
+Just as you did for the last project, think about the following questions: 
+
+What are the properties of a Complex Number? These become the data members for your Complex Number class. 
+What functions are required to manage these properties? These become the member functions for your Complex Number class. 
+Create a class diagram. If you don't know how to do this, go back to Lab Nine. It explains how to create a class diagram. 
+
+From the class diagram write down the class definition. The class definition goes into a file with the file extension .h (for header file). 
+
+Implement the functions for your Complex Number class. Write this code in a file with a .cpp file extension. 
+
+If you do the extra credit parts of this program, you will have to think carefully about what parameters each function takes, and what each returns. Read the specification carefully and be sure that your functions operate with the parameter types specified! The figure below illustrates sending an add message to a ComplexNumber object. Because this part of the problem is extra credit, these are the only hints that you will get. Good Luck! 
+
+ 
+
+ 
+
+ 
+
+Take care when outputting the value of a complex number. Be sure that you program does the output as described in the specification. You'll need to do some testing to see if values are positive, negative, or zero. 

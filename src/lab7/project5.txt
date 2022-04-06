@@ -1,0 +1,52 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 5: Pizza Comparison
+
+--------------------------------------------------------------------------------
+
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59pm on Saturday will receive 5 bonus points, only if program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+gets input from the user, 
+uses arithmetic expressions, assignment, and control structures, 
+uses programmer written functions that pass by value and by reference, 
+uses function overloading, and 
+formats output and sends it to cout 
+Project:
+Suppose that you have been asked to write a program to help consumers calculate the best deal when buying pizza. Although an extra large pizza may appear to be a better buy, you can't really tell until you calculate the cost per square inch. Your program will compute the cost per square inch of both round and rectangular pizzas. 
+
+Your program should include 
+
+A function named getData( )that gets all of the user input for a round pizza. For a round pizza it will ask for the diameter of the pizza and its price. Each piece of data entered by the user must be validated to ensure that it is a non-zero, positive value. If a value is zero or negative, tell the user that the input is invalid and go back and ask for that data to be input again. Somehow, this function must store the values it gets from the user where they can be accessed by other parts of the program. You cannot use global variables! The return type of the function is void. 
+Another function named getData( )that gets all of the user input for a square pizza. For a square pizza it will ask for the length and width of the pizza and its price. Each piece of data entered by the user must be validated to ensure that it is a non-zero, positive value. If a value is zero or negative, tell the user that the input is invalid and go back and ask for that data to be input again. Somehow, this function must store the values it gets from the user where they can be accessed by other parts of the program. You cannot use global data. The return type of the function is void. 
+A function named computeUnitCost( ) that takes the diameter of a round pizza and its price as parameters, and returns the cost of 1 square inch of that pizza. 
+Another function named computeUnitCost( ) that takes the length and width of a rectangular pizza and its price, and returns the cost of 1 square inch of that pizza. Note that the function computeUnitCost( ) is overloaded. 
+Your program should work as follows: 
+
+Display your student information. 
+Ask the user what kind of pizza they want to run this calculation for. 
+Get the user's response. If it is not an 's' or an 'r' (for a square or round pizza) print a message telling the user that the input is invalid, and try again. 
+Gather the data for the pizza from the user by calling the appropriate getData( ) function. 
+Compute the cost per square inch for this pizza by calling the appropriate computeUnitCost( ) function and display it. 
+Ask the user if they want to repeat the calculation for another pizza. 
+If the user types 'y' then go back to step 2 and repeat the calculation. 
+If the user types 'n' terminate the program. 
+If the user types anything other than 'y' or 'n' tell them that the input is invalid, and ask the user to input again. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author, and include your "did not copy code" declaration. Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+pizza.cpp 
+pizza.exe 
+Hints
+If you need help solving this problem, consider the hints located here. 
+
+Grading
+When submitting your program print the grading sheet and attach it to a copy of your source code. Submit these to your instructor by the due date specified for this program. The grade sheet is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

@@ -1,0 +1,34 @@
+         Sentence Corrections
+Introduction
+This program will help you understand how to manipulate data that is stored in a character array, and try out some of the character manipulation functions decribed in this lab. 
+
+Program Specification
+Write a short program that does the following: 
+
+Prompts the user to enter in a short sentence, less than 100 characters in length. 
+Gets the user's input and stores it in a char array. 
+Makes sure that the first word in the sentence is properly capitalized. 
+Makes sure that every other word in the sentence is all in lower case characters. For the purposes of this lab, we will ignore the the standard English rules governing the use of proper nouns in a sentence. 
+Eliminates multiple blanks between words. Your code should handle any number of blanks, converting them to a single blank. 
+Submitting Your Program
+After you have a successfully running program, submit it as described here. 
+
+The process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code file (.cpp) and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Your completed worksheet. 
+Create a zip file containing your source code file, your executable file, and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab12your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab12rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The grading sheet for this program is here. 
+ 

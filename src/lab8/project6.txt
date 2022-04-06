@@ -1,0 +1,60 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 6: Wind Chill Calculator
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. 
+
+Programs received prior to 11:59 on Saturday will receive 5 bonus points, only if program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+gets input from a file, 
+uses arithmetic expressions, assignment, and control structures, 
+uses a programmer written function, and 
+formats output and sends it to cout 
+Project:
+Meterologists report an index called the Wind Chill Factor to indicate the temperature, taking into account the chilling effect of the wind. Wind chill is approximated by the following formula: 
+ 
+     W = 35.74 + 0.6215t - 35.75 (v0.16) + 0.4275t(v0.16) 
+
+where 
+ 
+   v = wind speed in mph 
+ 
+   t = temperature in degrees Fahrenheit 
+ 
+   W = Wind chill index (in degrees Fahrenheit) 
+
+The function
+     double pow(double x, double y)
+raises the value in x to the power y. 
+
+Your program should work as follows: 
+
+Display your student information 
+Attempt to open the file. The filename, c:\\windData.txt, should be hardcoded into your program. Note the two slash characters in the file name. If the file cannot be opened, display a message and exit the program. 
+From the file read a temperature and a wind speed. Both values should be stored in variables declared as double. The file is a text file. 
+Calculate the wind chill factor using a programmer written function, and display the result in the form: 
+ 
+For t = temperature from file
+and v = wind speed from file
+Wind chill index = calculated result degrees Fahrenheit. 
+ 
+
+Repeat these steps until an end of file is encountered. 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+windchill.cpp 
+windchill.exe 
+Hints
+If you need some help writing the code for this project, there are some hints here. 
+
+Grading
+When submitting your program print the grading sheet and attach it to a copy of your source code. Submit these to your instructor by the due date specified for this program. The grade sheet is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 
+
+You can get a sample data file here. 

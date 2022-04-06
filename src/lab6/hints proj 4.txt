@@ -1,0 +1,33 @@
+Hints for Project Four
+There are two problems to consider in this project. 
+
+How do I get the input from the user? 
+In this project, the user will supply two real numbers and an operator in the form 
+
+    34.56 + 27.21 
+
+You need some local variables to store these values. According to the project specification the two real numbers should be stored as doubles. What about the operator? Since only the symbols 
+
+    + - * / 
+
+are valid, you can store this input as a char. 
+
+In class we have talked about the fact that the stream extraction operator stops reading at white space. So, if I enter this data with blanks on either side of the operator, thus 
+
+    34.56 + 27.21 
+
+Then the stream extraction operator is all that is needed to read the data in correctly. It turns out that you actually don;t need to include the blanks and the code will still work. Try it. Do you know why this works? Ask your instructor. 
+
+How do I call the functions? 
+Think carefully about what each function needs to do and what it looks like. How many parameters does each function take? According to the specification each function takes two parameters. For eample, if the function is going to add two values together, you need to pass it the two values to be added. What does each function return. According to the specification, each returns a double, which would be the result. In the addition example, you would return the sum. So, the function prototype for the add function would probably look someting like 
+
+    double add(double, double); 
+
+To call the function just pass the two numbers to be added. For example if 
+
+    double n1 = 3.5;
+    double n2 = 5.7; 
+
+The we could print the sum with the statement 
+
+    cout << "\n" << n1 << " + " << n2 << " = " << add(n1, n2); 

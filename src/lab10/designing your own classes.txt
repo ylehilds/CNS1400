@@ -1,0 +1,36 @@
+         Class Design Problem
+Introduction
+In this programming exercise, you will develop and test the code for a simple class. This class will use composition, as described in the slides on "Constuctors and Other Tools". Before you start this assignment, you must complete the reading material for this lab, and complete the Worksheet. In the reading material for this lab, you were introduced to two classes, a Point class, and a Line class. On the worksheet, you developed the design for a Rectangle class. In this exercise, you will code, and test your Rectangle class. 
+
+Files Required for This Project
+Download the following files: 
+
+lines.h - the header file for all class definitions 
+lines.cpp - the implementation file for all classes 
+The file containing the main( ) routine 
+Program Specification
+Using the class diagram that you created on the worksheet for this lab, add the class definition for your Rectangle class to the file lines.h. 
+Add the implementation of your Rectangle class to the file lines.cpp. 
+Create a stand-alone function, printRectangle( ) that will take a Rectangle object, and print out the coordinates of its two corners, its area, and its perimeter. Add this code to the file driver.cpp. 
+Submitting Your Program
+After you have a successfully running program, submit it as described here. 
+
+The process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your source code (.cpp and .h) files and an executable file (.exe). Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Your completed worksheet. 
+Create a zip file containing your source code files (lines.h, lines.cpp and driver.cpp), your executable file, and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab10your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab10rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+The gradesheet for this project is here. 
+ 

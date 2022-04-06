@@ -1,0 +1,69 @@
+CNS 1400 Object-oriented Programming I
+Programming Project 2: Calculating Bank Interest
+
+--------------------------------------------------------------------------------
+
+Due Date:
+Must be submitted no later than 11:59pm on Sunday. Programs received prior to 12:00am on Saturday will receive 5 bonus points only if the program completely meets the specifications and executes correctly. 
+
+Objective:
+At the completion of this project, you will have created an application that 
+
+makes use of a UML Activity Diagram to describe the steps required to solve the problem 
+gets input from cin, 
+uses conditional statements 
+uses arithmetic expressions, assignment, and 
+formats output and sends it to cout 
+Project:
+Carefully study the specification of the program as given in the following paragraphs. After you have studied the requirements that the program should satisfy, follow these steps to design your solution: 
+
+Write down everything that you know about the problem 
+Write down what it is that your program needs to compute 
+Write down any formulas or equations that you might find useful in step (2) 
+create a UML Activity Diagram, as demonstrated in lab #3. Then use the activity diagram as the basis for writing the code that you submit. 
+Suppose that you are creating software for a local bank. At the end of each month the bank wants to update each checking account with any interest earned, and with any service charges. The bank offers two kinds of checking accounts: 
+
+Standard Checking: 
+- Standard checking accounts earn a flat 3% interest
+- The bank charges a service fee of $0.10 for each check that is written.
+ 
+
+
+Premium checking accounts: 
+- Premium accounts require a minimum balance of $5000.00
+- If the ending balance for a month is below the $5000.00 minimum balance, the bank pays 3% interest
+- However, for accounts with an ending balance greater than or equal to $5000.00 the bank pays 5% interest
+- There are no service fees for checks written, as long as the ending balance is not less than $5000.00
+- If the ending balanced is less than $5000.00, the bank charges $0.10 per check that is written 
+
+Your program must do the following: 
+
+Prompt the user to enter in the type of account - standard(s) or premium(p) 
+Get the user's input. If it is neither an s or a p, display an error message and go back to step 1. 
+Prompt the user to enter in the ending balance for the month. 
+Get the user's input. No input validation is required. 
+Prompt the user to enter the number of checks written during the month 
+Get the user's input. No input validation is required. 
+Based on the user's input, calculate the new ending balance for the account by 
+first adding in any interest and then 
+deducting any service charges for checks written. 
+Print out the result in the form: 
+ 
+     Balance = $calculated result 
+ 
+Your final value must be ouput as proper dollars and cents (two decimal places after the decimal point). 
+Format and document your code in accordance with the course style guidelines.  Include a file prologue identifying you as the author.  Also include an electronic version of you Activity Diagram. Diagrams may be done in Word, or scanned in and sent as an image file. Submit your project using the instructions outlined in the Course Syllabus, Programming Projects section. 
+
+File(s) to Submit:
+banking.cpp 
+banking.exe 
+UML diagram 
+Hints
+If you need help solving this problem, you can find some hints here. 
+
+Grading
+The grade sheet for this program is here 
+
+Sample Output:
+ 
+You can get an executable that runs correctly here! 

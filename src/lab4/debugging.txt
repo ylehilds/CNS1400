@@ -1,0 +1,172 @@
+         Programming Exercise: Debugging Your Program
+Introduction
+In this lab, you will do the following: 
+
+Create and Compile a Simple Program. 
+Resolve syntax errors noted by the compiler. 
+Use the Dubugger to resolve logic errors. 
+The problem
+For this lab, you will be compiling a program that has already been written for you. This program computes the gross pay for a Sales person at a car dealership. At this particular dealership, sales people receive a paycheck at the first of every month. Their pay is partially based on their sales for the previous month. The algorithm for computing a sales person's pay is described in the following paragraph: 
+
+If a person's sales exceed $40,000 in one month, then their commission will be ten percent of their sales for that month. If their sales is between $25,000 and $40,000, then their commission is five percent of their sales for the month. Otherwise, their commission is three percent of their sales for the month. 
+
+Your program will get the amount of sales for a person and calculate their gross pay. Their gross pay is equal to their commission plus a base salary of $1,000.00. 
+
+Deriving the Solution
+Although I am providing the code for you in this lab, it will be important for you to understand how the problem is being solved. It is very difficult to debug a program if you don't really understand what it is that you expect the program to do. Following the model outlined in last week's lab, write down what you know, and what you don't know. 
+
+Write down the steps required to get from what you know to what you don't know. 
+
+Now draw an Activity Diagram. Keep the activity diagram in front of you while debugging the program. You will turn this activity diagram in with your code. 
+
+Writing the Code
+The code for this program has been written and is provided for you at the following link. This code contains a number of syntax errors and logic errors. Your objective in this lab is to solve all of these errors and come up with a correctly running program. The code that you download may differ in many cases from what you see in the examples that follow. 
+
+Download code 
+
+Create a new project. If you downloaded the code above into a file on computer, you can add this code to your project by clicking on the Project item in the menu bar, then on Add To Project and finally on Files. When the file dialog box opens, navigate to the place where you stored the file and click on it. This will add the file to the new project. Now, save the project and compile your program. Your screen should now look something like the following:
+
+ 
+
+Syntax Errors
+The top pane in the minGW window contains your code. The bottom pane contains messages from the compiler. In this case, there are several errors in the program that the compiler found. These are called syntax errors. That means that we have made a mistake in using the C++ language correctly. Double click on the top error. The error will now be highlighted and a green arrow will appear in the code window to show you the line that the error occured on. This is illustrated in the following figure.
+
+ 
+
+The first error says 
+
+     payroll.cpp:30: error: `Commission' undeclared
+
+
+Remember that in C++ you have to declare a variable before you use it. This message tells us that the variable Commission has not been declared. How can this be? In line 22 of the program, as shown in the figure above we have the declaration 
+
+    double commission; 
+
+But, look carefully at line 22 and line 30 where the error occured. Notice that on line 22, the 'c' in commission is lower case. In line 30, the 'C' in Commission is in upper case. Names in C++ are case sensitive, so the names commission and Commission are seen by the compiler as two different names. We can fix this error by making the 'C' in Commission on line 30 a lower case 'c'. 
+
+The other messages relative to line 30 just give additional information about this error, so they can be ignored. 
+
+Now, double click on the error for line 35. This line will be highlighted and the arrow in the code pane will move to line 35. The error message for this line is 
+
+     payroll.cpp:35: error: syntax error before `}' token
+
+
+This message doesn't give us much to work on. It simply says that the compiler found something that is not correct. We have to do some detective work to find the error. If you look at line 35 you will see that it is just a single closing curly brace. That in and of itself doesn't look like a syntax error. But the compiler doesn't believe that a closing curly brace belongs here. Why not? To find out, we need to look at the line above it. This line reads 
+
+    commission = sales * SMALL_BONUS 
+
+Can you see anything wrong with this line? The statement does not end in a semi-colon. In C++, every statement must end in a semi-colon. In this case, since there was no semi-colon, the compiler tried to make the curly brace on the following line a part of the statement. However this violates the syntax rules for C++, and so we get the error. 
+
+Fix the error by adding a semi-colon at the end of line 35. 
+
+The next line should look someting like 
+
+    payroll.cpp:39: warning: assignment to `int' from `double'
+
+Note that this is a warning, not an error. If you re-compiled the program at this point, you would find that the program actually compiles just fine. In fact, you can run the program and it will execute. So what's the big deal about warnings? A warning tells you that the compiler has found something that is not an improper use of the C++ language, but that might not do exactly what you expect it to. In this case, line 39 reads 
+
+     pay = salary + commission; 
+
+The problem is that we are going to store a floating point value as an integer. The compiler has told you that you can do this if you want to, but it has issued the warning so that you know that your program might lose some precision in the process. You should always pay attention to warnings. While a program will compile and exeucte with warnings, it is very likely that it will produce invalid results. 
+
+In this case, we can fix the problem by declaring pay as a double. 
+
+If you have repaired these three errors, your program should now compile without any errors or warnings. Run the program and enter in a value of 30000 when asked for sales. If you have not made any other changes to the program, you should get an answer of 151000. When you run a program you should have some notion of whether or not the answers that it produces are correct. What about this answer? Is it correct? 
+
+Logic Errors
+If a salesman sells $30,000.00 worth of merchandise a month and gets a paycheck for $151,000.00, your company will go bankrupt fast! What's wrong. Well, you should be able to calculate the correct answer by hand, or with a calculator. We know that if a sales person sells more than $25,000 in merchandise, then she will get a commission of 5% on her sales. 5% of $30,000 is $1,500. Add the $1,000 base salary and the gross pay should be $2,500. That's a far cry from the answer of $151,000 produced by the program. We have a Logic error in our program. 
+
+How can we figure out what is wrong? In this exercise we will use the debugging tools built into minGW Studio help us solve this problem. With your project open in minGW, click on the item in the menu bar labeled Debug. On the drop down menu that appears, you will see a number of options that you can use to help track down program bugs. We will use several of these options in the Debug menu. 
+
+Setting a Watch: Click on the bottom item in the drop down menu, labeled QuickWatch. A dialog box should appear like the one shown below:
+
+ 
+
+In the field labeled Expressions at the top of this window type in the string commission and hit the enter key. This tells the debugger that we want to keep an eye on the value of commission as the program executes. You could actually type an expression here, such as 
+
+    commission + 1000 
+
+Do it. The QuickWatch window now should look something like
+
+ 
+
+Setting a BreakPoint: Breakpoints are locations in your program where you want execution to stop so that you can do some debugging. Let's set a breakpoint at line 28. In minGW studio you set a breakpoint by moving the cursor to the line where you want execution to stop, and then click on Debug - Toggle BreakPoint on the menu bar. When a breakpoint has been set it shows up in minGW Studio as a red dot in the left margin,as shown in the following figure:
+
+ 
+
+On the menu bar, click on DeBug - Go. This will start your program executing. You should see a DOS console window appear with the prompt message to enter in a sales figure. Type in 30000 and hit the Enter key. You screen should look something like the following:
+
+
+
+In the bottom panel you will see a message that the debugger has started. In the code window you will see a yellow arrow overlaying the red breakpoint dot. This arrow indicates that the program has stopped, and that the next line of code that will be executed is the line that the arrow points to. You should also see some values in the Quickwatch window. These values don't mean much right now, because the program has not done any calculations yet. 
+
+Stepping Through a Program At this point it would be nice if we could execute the program one step at a time and watch what happens. The debugger will let us do exactly that. If you click on the Debug item on the menu bar again you will see two options
+
+   Step Into (F11), and
+   Step Over (F10). 
+
+Step Into lets you follow the execution path into a function that is being called. We will discuss functions later in the semester. Step Over Lets the whole function execute and stops again at the line after the function. In this case, this is just what we want to do. Click on Step Over or press F10. The resulting window should look something like the following:
+
+ 
+
+The red dot remains on the original breakpoint. However, the yellow arrow has advanced to the next executable statement. From this we can conclude something about the behavior of this program. The line at the breakpoint is 
+
+    if (sales > SMALL) 
+
+We have now executed this if statement. Stop and think about this step. Is the condition true? Since the yellow arrow is on the line that reads 
+
+    commission = sales * SMALL_BONUS; 
+
+we know that the computer evaluated the condition in the if statement as true. In fact, this is the case, since sales is equal to 30,000 and SMALL is equal to 25,000, sales is indeed larger than SMALL. 
+
+The next line to be executed will be the line that the arrow now points to. Let's go ahead and step through this line and see if we get sensible answers. Press F10 again. Your screen should look something like
+
+ 
+
+The yellow arrow has now moved clear down to line 39. which is what we expect, since all of the else clauses will be skipped when the if condition is true. Look at the QuickWatch window. 
+
+    commission = 150000
+    commission + 1000 = 151000
+
+
+Clearly, the commission value is wrong! It should be 
+
+    30000 * 5% = 1500. 
+
+Analyzing the Problem: How did the program produce the wrong answer? The statement that was just executed is the one that calculated the commission. Look at it closely. 
+
+    commission = sales * SMALL_BONUS; 
+
+We know that sales is 30,000 - we just typed it in. To verify this, you could type sales into the QuickWatch window. It appears that the problem must be with the value of SMALL_BONUS. Let's check it. SMALL_BONUS is declared on line 15. 
+
+    const int SMALL_BONUS = 5; 
+
+Ah-ha! We mistakenly wrote down 5% as just the integer 5. When doing calculations we have to represent the value of 5% as 0.05. Make the change. You will have to change the data type to double. You will probably notice that the same mistake was made with BIG_BONUS and TINY_BONUS. Fix these as well. Now re-build your program and test it again with a value of 30000. It should produce the correct answer. 
+
+Test All Conditions: Are we done? Is the program now correct? At this point you know that the program works correctly for a sales value of 30000. But, it needs to be tested for other reasonable values. In particular, we need to be certain that each of the cases works correctly. We have tested the case where the sales value is between $40,000 and $25,000. 
+
+Completing The Lab
+Complete this lab by testing the program for other values of sales. Does it work for sales values greater than $50,000? Does it work for sales values less than $25,000? Test the boundary conditions as well, for example, what result do you expect when the sales value is exactly $50,000? 
+
+If the answers are not what you expect them to be use the debugging techniques we used in the exercise above to find out what the errors are and correct them. 
+
+Submitting Your Program
+Once you have a working solution, the process for submitting a program for grading is as follows. Failure to follow these instructions when submitting your programs may result in your project not being graded, or being penalized points for missing or incorrect items. Submissions must include 
+
+Your activity diagram. 
+Your source code (.cpp) file, an executable file (.exe), and your completed worksheet. Do not send other files, for example .bpr, .tds, etc. 
+Your name, course/section number, instructor name, and date must be included as comments in each source code file. 
+Create a zip file containing your activity diagram, source code file (lab03.cpp), executable file (lab03.exe), and your completed worksheet. Remember that your executable must run in the lab, in order for you to receive a grade on this assignment. If you do not know how to zip a file, consult with one of the tutors or lab assistants. Your zip file must be named as follows:
+ 
+   lab04your-initials.zip
+ 
+So, for example, my zip file would be named 
+ 
+   lab04rkd.zip
+ 
+
+
+Upload your zip file to WebCT. 
+
+Print out a copy of the gradesheet that is located here. Attach your activity diagram to the worksheet and hand it in when requested by your instructor. Internet students must create an electronic version of their activity diagram (a scanned image file, or a Microsoft Office File) and email it to your instructor. 
+ 
