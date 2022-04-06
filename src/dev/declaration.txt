@@ -1,0 +1,26 @@
+// Author: studentName
+// Assignment: projectNumber
+// Instructor: InstructorName
+// Class: CNS 1250 Section: sectionNumber 
+// Date Written: the Date 
+// Description: the description of what's in this file 
+
+// Author: Carl Coder
+// Assignment: Project #1
+// Instructor: Dr. deBry
+// Class: CNS 1250 Section: 002
+// Date Written: Sep 3, 2001
+// Description: Non-interactive four-function integer 
+// calculator. Designed as a stand-alone
+// C++ application that displays results
+// in a DOS window
+
+
+
+
+// I declare that the following source code was written
+// solely by me. I understand that copying any source
+// code, in whole or in part, constitutes cheating, and
+// that I will receive a zero in this assignment if I am
+// found in violation of this policy.
+// -----------------------------------
